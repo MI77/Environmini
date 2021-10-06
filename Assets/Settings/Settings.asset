@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df31ddd7a69590e448d73ce9d9a297ca, type: 3}
+  m_Name: Settings
+  m_EditorClassIdentifier: 
+  timeBetweenAnimalTiles: 1
+  timeBetweenWaterTiles: 0.2
+  animalChance: 0.4
+  animalTilesToRun: 3
+  tileYScaleAdjustment: 0.05
+  timeBetweenForestTiles: 0.1
+  tileMoveDuration: 0.5
+  startingNumberOfMoves: 10
+  startingGridSize: 4
+  movesToAddOnExtend: 5
+  startingTargetScore: 25
+  targetScoreMultiplier: 4
+  numActiveBonuses: 2
+  highScore: 30
+  Scores: 1100000012000000130000001300000014000000100000000f00000010000000100000001100000018000000190000001a0000001a0000001b0000001000000010000000110000001200000012000000110000001200000013000000140000001000000010000000100000001000000011000000140000001500000015000000160000000f0000000f000000100000001d0000001d0000001e00000014000000150000001600000010000000110000001200000014000000150000001600000017000000180000001c0000001d00000000000000000000000000000000000000000000000000000000000000
+  grassPrefab: {fileID: 7023756065788858252, guid: c47eaa54aeacb1448ae652855d22bde3, type: 3}
+  dirtPrefab: {fileID: 7421896664010372552, guid: 2746d11f7a16a6c4d85adc7d4f5a191d, type: 3}
+  wetlandPrefab: {fileID: 4105891221220059404, guid: d5670e0e9b0dd6743b561cae101ea985, type: 3}
+  riverPrefab: {fileID: 3183793768399989323, guid: 6e3531450b0933341aa449aa27c79144, type: 3}
+  forestPrefab: {fileID: 7421896664010372552, guid: 125a598f6da20b44f8fa585ad18b38ae, type: 3}
+  bonusFadeTime: 0.2

@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 4aac5a12a2bd2f3459034dbc61001e12
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - BellTopo Sans
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b5b90f77f213d0c4aa02fb2ed4902334, type: 3}
+  - {fileID: 12800000, guid: 9739397b46a313d419a8efb7bd1ea0ec, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
