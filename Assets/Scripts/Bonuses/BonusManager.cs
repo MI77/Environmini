@@ -12,8 +12,7 @@ public class BonusManager : MonoBehaviour
 {
     [SerializeField]
     private GridManager gridManager;
-    private Dictionary<Point, Tile> tiles;
-
+    
     public SettingsSO settings;
     public GameObject bonusImagePrefab;
 
@@ -30,9 +29,8 @@ public class BonusManager : MonoBehaviour
 
     private List<(Tile, BonusType)> bonusesAwarded;
     
-    public void Awake()
+    private void Awake()
     {
-        tiles = gridManager.tiles;
         activeBonuses = new Bonus[settings.numActiveBonuses];
         bonusesAwarded = new List<(Tile, BonusType)>();
         bonusAudio = GetComponent<AudioSource>();
@@ -50,9 +48,11 @@ public class BonusManager : MonoBehaviour
 
     public void GenerateBonuses()
     {
+        //clear the internal list
         bonusesAwarded.Clear();
         activeBonuses = new Bonus[settings.numActiveBonuses];
-
+        
+        // populate the list
         for (int i = 0; i < settings.numActiveBonuses; i++)
         {
             if (debugBonusList.Count != 0)
@@ -75,7 +75,7 @@ public class BonusManager : MonoBehaviour
         else
             bonus = BonusProcessor.GetBonus((BonusType)type);
 
-        bonus.tiles = tiles;
+        bonus.tiles = gridManager.tiles;
         activeBonuses[bonusPosition] = bonus;
         var bonusImagetransform = bonusImages.transform.Find("BonusImage" + bonusPosition);
         GameObject bonusImage;

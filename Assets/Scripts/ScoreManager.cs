@@ -41,7 +41,7 @@ public class ScoreManager : MonoBehaviour
         {
             // add an entry to the highscores menu for each highscore
             //TODO : apply some alternate-row shading
-            var numScores = Math.Min(highScoresList.highScores.Count-1, 10);
+            var numScores = Math.Min(highScoresList.highScores.Count-1, 9);
             for (int i = 0; i <= numScores; i++)
             {
                 var menuEntry = Instantiate(highScoreMenuPrefab, highScoreMenuContainer.transform);

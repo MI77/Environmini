@@ -16,11 +16,15 @@ public class MoveList : MonoBehaviour
     private readonly System.Random random;
     public List<GameObject> debugMoveList;
 
+    private void Awake()
+    {
+        //GenerateMoveList();
+    }
     public void GenerateMoveList()
     {
-        // clear the internal representation
+        // clear the internal list
         moveList.Clear();
-        // clear the gameobjects
+        // destory any gameobjects
         for (int i = 0; i < this.transform.childCount; i++)
         {
             Destroy(transform.GetChild(i).gameObject);
@@ -45,6 +49,7 @@ public class MoveList : MonoBehaviour
     public Tile GetNextMove()
     {
         var nextMove = moveList[0];
+        //Destroy(moveList[0]);
         moveList.RemoveAt(0);
         RefreshMoveList();
         return nextMove;

@@ -24,8 +24,8 @@ public class MainMenuBehaviour : MonoBehaviour
     public void StartNewGame()
     {
 
-        gameManager.StartNewGame();
         HideMenu();
+        gameManager.StartNewGame();
     }
     public void BackToMainMenu()
     {
