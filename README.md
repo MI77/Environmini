@@ -2,6 +2,8 @@
  
 Environmini is a small puzzle game where you transform the environment from dirt to forest, grass, rivers etc. Earn points for placing tiles of the same type on top of each other. Get bonuses for lining up tiles with the right number of points!
 
+#### You can play it in your browser here: https://mi77.itch.io/environmini 
+
 As with so many people, the pandemic gave me an opportunity to learn a new skill - in this case Unity game dev! This is the second idea I've tried building into a game, but the first I've felt warranted sharing with the world. There's much more I could add, so please drop any Issues with your thoughts about what works and what doesn't!
 
 I wanted to make something that didn't need loads of art but had some interesting mechanics and rules to develop. I've been heavily influenced by Into The Breach, Dorfromantik, and the upcoming Terra Nil, but wanted to start with something really scoped down.
