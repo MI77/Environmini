@@ -327,6 +327,7 @@ MonoBehaviour:
   hasXAnimals: 0
   xAnimals: {fileID: 0}
   isInMoveList: 0
+  block: {fileID: 2569126759223702498}
 --- !u!114 &3548943694565942130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,15 +340,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e27166578efe2459de69f0fa906ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onEnterEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onExitEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onMouseUpEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &7474580672421517399
 GameObject:
   m_ObjectHideFlags: 0

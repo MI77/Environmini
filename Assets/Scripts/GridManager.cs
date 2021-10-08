@@ -30,8 +30,9 @@ public class GridManager : MonoBehaviour
     
     public Camera gridCamera;
 
-    public Color readyColor;
-    public Color busyColor;
+    public Texture2D timerCursor;
+    public Texture2D pointerCursor;
+
     private bool turnIsProcessed = false;
 
 
@@ -42,15 +43,16 @@ public class GridManager : MonoBehaviour
     {
         if(teststuff != null)
             teststuff.SetActive(false);
+
     }
 
     private void Update()
     {
         if (DOTween.TotalPlayingTweens() != 0)
-            gridCamera.backgroundColor = busyColor;
+            Cursor.SetCursor(timerCursor, Vector2.zero, CursorMode.Auto);
         else
         {
-            gridCamera.backgroundColor = readyColor;
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
             if (!turnIsProcessed)
                 ProcessEndOfTurn();
         }

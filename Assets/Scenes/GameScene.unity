@@ -1206,7 +1206,7 @@ GameObject:
   - component: {fileID: 28873189}
   - component: {fileID: 28873188}
   m_Layer: 5
-  m_Name: ScorePanel
+  m_Name: CreditsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2012,6 +2012,7 @@ MonoBehaviour:
   hasXAnimals: 0
   xAnimals: {fileID: 0}
   isInMoveList: 0
+  block: {fileID: 0}
 --- !u!65 &41198986
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25761,6 +25762,7 @@ MonoBehaviour:
   hasXAnimals: 0
   xAnimals: {fileID: 0}
   isInMoveList: 0
+  block: {fileID: 0}
 --- !u!65 &493110839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45150,11 +45152,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4909645727171269099, guid: b1c0cbaffe3c2c04abf46d4261374f70, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 960
+      value: 640
       objectReference: {fileID: 0}
     - target: {fileID: 4909645727171269099, guid: b1c0cbaffe3c2c04abf46d4261374f70, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -911.8166
+      value: -611.81665
       objectReference: {fileID: 0}
     - target: {fileID: 4909645727171269099, guid: b1c0cbaffe3c2c04abf46d4261374f70, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -58854,12 +58856,19 @@ MonoBehaviour:
   m_text: 'Credits:
 
 
-    Most stuff: me!
+    Art: OpenGameArt.org - William.ThompsonJ, BitGem, Nicrom,
+    Quaternius
 
 
-    Art:
+    Sounds: Freesound.org - dheming, soundslikewillem, duckduckpony,
+    productionNow, kalhan
 
-    Sounds:'
+
+    Code/modules: DOTween
+
+
+    Thanks for the tutorials:
+    Tom Francis, samyam, Jason Weimann, Code Monkey and many others'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cd16ce734a28c2e4483d59d3e795be93, type: 2}
   m_sharedMaterial: {fileID: 5875857348037047617, guid: cd16ce734a28c2e4483d59d3e795be93, type: 2}
@@ -58886,8 +58895,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64
-  m_fontSizeBase: 64
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -92062,8 +92071,8 @@ MonoBehaviour:
   menuManager: {fileID: 1706362958}
   teststuff: {fileID: 2061859915}
   gridCamera: {fileID: 963194227}
-  readyColor: {r: 0.39607844, g: 0.43137255, b: 0.49019608, a: 0}
-  busyColor: {r: 0.27490208, g: 0.35577604, b: 0.49056602, a: 1}
+  timerCursor: {fileID: 2800000, guid: 5411a68b3e639e349ad187179a9fad81, type: 3}
+  pointerCursor: {fileID: 0}
 --- !u!4 &1618893154
 Transform:
   m_ObjectHideFlags: 0
@@ -107861,11 +107870,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4909645727171269099, guid: b1c0cbaffe3c2c04abf46d4261374f70, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 960
+      value: 640
       objectReference: {fileID: 0}
     - target: {fileID: 4909645727171269099, guid: b1c0cbaffe3c2c04abf46d4261374f70, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -575.45
+      value: -395.44998
       objectReference: {fileID: 0}
     - target: {fileID: 4909645727171269099, guid: b1c0cbaffe3c2c04abf46d4261374f70, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -111794,10 +111803,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1280}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -115042,10 +115051,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -118732,7 +118741,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -203.63333}
+  m_AnchoredPosition: {x: 640, y: -143.63333}
   m_SizeDelta: {x: 473.78, y: 189.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &4229929143772416031
