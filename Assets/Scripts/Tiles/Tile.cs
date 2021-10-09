@@ -9,6 +9,7 @@ public abstract class Tile : MonoBehaviour
 {
     public Tile()
     { }
+    public MeshRenderer block;
 
     public abstract TileType TileType { get; }
     public abstract GameObject GetPrefab();
@@ -42,6 +43,9 @@ public abstract class Tile : MonoBehaviour
 
     private void Start()
     {
+        if(block != null)
+            RandomizeColor(block);
+        
         RandomizeDecorationRotationAndPosition(gameObject);
         levelUpNoise = this.gameObject.AddComponent<AudioSource>();
     }
@@ -165,5 +169,20 @@ public abstract class Tile : MonoBehaviour
             RandomizeDecorationRotationAndPosition(childGO);
 
         }
+    }
+
+    protected void RandomizeColor(MeshRenderer mesh)
+    {
+        Material mat = mesh.materials[0];
+
+        Color color = mat.color;
+        int r = UnityEngine.Random.Range(-8, 8);
+        int d = 400;
+
+        color.r += (float)r / d;
+        color.g += (float)r / d;
+        color.b += (float)r / d;
+
+        mat.color = color;
     }
 }

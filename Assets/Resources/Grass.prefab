@@ -306,6 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dabca0fa9331264085418abd78985c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 713102081048491933}
   levelUpClips:
@@ -321,6 +322,7 @@ MonoBehaviour:
   hasXAnimals: 0
   xAnimals: {fileID: 8963647546234604269}
   isInMoveList: 0
+  block: {fileID: 5390007940523483608}
 --- !u!65 &954397519999577523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -359,39 +361,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e27166578efe2459de69f0fa906ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onEnterEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 713102081048491933}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  onExitEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 713102081048491933}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onMouseUpEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1001 &261172264958730897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3731,6 +3700,11 @@ PrefabInstance:
 --- !u!4 &6522913714871474871 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9a0e03013a5d95b44afb22ff12dabcd3, type: 3}
+  m_PrefabInstance: {fileID: 6704929708880788828}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &5390007940523483608 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 9a0e03013a5d95b44afb22ff12dabcd3, type: 3}
   m_PrefabInstance: {fileID: 6704929708880788828}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6720649102589098073

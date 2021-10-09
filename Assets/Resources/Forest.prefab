@@ -218,6 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a32f01f561e7f4a91c178eed8220df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 977322803242939163}
   bonusesAwarded: 
   highlight: {fileID: 1053364220258583716}
   levelUpClips:
@@ -453,6 +454,11 @@ PrefabInstance:
 --- !u!4 &2151323374434961524 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9a0e03013a5d95b44afb22ff12dabcd3, type: 3}
+  m_PrefabInstance: {fileID: 1896490743607701407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &977322803242939163 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 9a0e03013a5d95b44afb22ff12dabcd3, type: 3}
   m_PrefabInstance: {fileID: 1896490743607701407}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3068760475040442186

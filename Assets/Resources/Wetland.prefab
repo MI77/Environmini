@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e13576f715a404091c082259710873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 3642430642105878754}
   bonusesAwarded: 
   highlight: {fileID: 5909054729669459687}
   levelUpClips:
@@ -121,39 +122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e27166578efe2459de69f0fa906ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onEnterEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5909054729669459687}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  onExitEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5909054729669459687}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onMouseUpEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &4858570828606139855
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,6 +681,11 @@ PrefabInstance:
 --- !u!4 &2506164692442411917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9a0e03013a5d95b44afb22ff12dabcd3, type: 3}
+  m_PrefabInstance: {fileID: 2687829837335925862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &3642430642105878754 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 9a0e03013a5d95b44afb22ff12dabcd3, type: 3}
   m_PrefabInstance: {fileID: 2687829837335925862}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2863258340918458679
@@ -1288,7 +1261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3dd708ad6e852024fb647dc58e7746ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.32
+      value: 2.98
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3dd708ad6e852024fb647dc58e7746ec, type: 3}
       propertyPath: m_LocalPosition.y

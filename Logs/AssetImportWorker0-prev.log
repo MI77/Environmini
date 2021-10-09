@@ -15,11 +15,11 @@ C:/Users/will_/Terraformini
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55811
+61793
 Successfully changed project path to: C:/Users/will_/Terraformini
 C:/Users/will_/Terraformini
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 78.03 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 79.65 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.0f1 (c7b5465681fb)
 [Subsystems] Discovering subsystems at path f:/Program Files/Unity/2020.3.0f1/Editor/Data/Resources/UnitySubsystems
@@ -36,195 +36,103 @@ Initialize mono
 Mono path[0] = 'f:/Program Files/Unity/2020.3.0f1/Editor/Data/Managed'
 Mono path[1] = 'f:/Program Files/Unity/2020.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'f:/Program Files/Unity/2020.3.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56612
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56664
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: f:/Program Files/Unity/2020.3.0f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: f:/Program Files/Unity/2020.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001988 seconds.
+Registered in 0.001998 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 78.04 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 74.51 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.895 seconds
+- Completed reload, in  2.564 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003453 seconds.
+Registered in 0.004293 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 76.54 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 77.56 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.409 seconds
+- Completed reload, in  1.394 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
+Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.OnEnable () [0x00023] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:202 
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.67 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.68 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3329 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 164.8 MB.
-System memory in use after: 165.0 MB.
+Unloading 3319 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 162.3 MB.
+System memory in use after: 162.5 MB.
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3793.
-Total: 3.158400 ms (FindLiveObjects: 0.351500 ms CreateObjectMapping: 0.092000 ms MarkObjects: 2.601500 ms  DeleteObjects: 0.112200 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Editor
-  artifactKey: Guid(39334fd6666b9a7418f7597dd25aed89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Editor using Guid(39334fd6666b9a7418f7597dd25aed89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84d717575ccf72b65c98c2c53197a825') in 0.013035 seconds
-  Import took 0.018727 seconds .
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3783.
+Total: 3.168500 ms (FindLiveObjects: 0.375400 ms CreateObjectMapping: 0.092900 ms MarkObjects: 2.586300 ms  DeleteObjects: 0.112400 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 9.887622 seconds.
-  path: Assets/Editor/RemoveURPTextures.cs
-  artifactKey: Guid(e0dc23a7e82f9954686d9e1efa19cf32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Editor/RemoveURPTextures.cs using Guid(e0dc23a7e82f9954686d9e1efa19cf32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11ebbc8284b6f5e87786a6f442b89d32') in 0.103924 seconds
-  Import took 0.110217 seconds .
+  path: Assets/Scripts/Tiles/Grass.cs
+  artifactKey: Guid(7dabca0fa9331264085418abd78985c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Tiles/Grass.cs using Guid(7dabca0fa9331264085418abd78985c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9013c69987a51f42a7a84eb1db68b5bb') in 0.043895 seconds
+  Import took 0.049672 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 107.260408 seconds.
-  path: Assets/Editor/RemoveURPTextures.cs
-  artifactKey: Guid(e0dc23a7e82f9954686d9e1efa19cf32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Editor/RemoveURPTextures.cs using Guid(e0dc23a7e82f9954686d9e1efa19cf32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c379aaea07fb5251a9cda8e5b07bbb6') in 0.004282 seconds
-  Import took 0.011209 seconds .
+  Time since last request: 0.000791 seconds.
+  path: Assets/Scripts/Tiles/Dirt.cs
+  artifactKey: Guid(fc4dd79dea043be42a5827255a63792f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Tiles/Dirt.cs using Guid(fc4dd79dea043be42a5827255a63792f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd10dec91d69461b0554079fa372eebd2') in 0.007766 seconds
+  Import took 0.013159 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.194201 seconds.
-  path: Assets/Editor/RemoveURPTextures.cs
-  artifactKey: Guid(e0dc23a7e82f9954686d9e1efa19cf32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Editor/RemoveURPTextures.cs using Guid(e0dc23a7e82f9954686d9e1efa19cf32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c379aaea07fb5251a9cda8e5b07bbb6') in 0.004734 seconds
-  Import took 0.010398 seconds .
+  Time since last request: 86.242355 seconds.
+  path: Assets/Resources/Dirt.prefab
+  artifactKey: Guid(2746d11f7a16a6c4d85adc7d4f5a191d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Dirt.prefab using Guid(2746d11f7a16a6c4d85adc7d4f5a191d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.Create () [0x0001a] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:92 
+  at UnityEngine.Rendering.Universal.ScriptableRendererData.InternalCreateRenderer () [0x00009] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ScriptableRendererData.cs:51 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreateRenderers () [0x00056] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Data\UniversalRenderPipelineAsset.cs:351 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006a] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Data\UniversalRenderPipelineAsset.cs:301 
+  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x00004] in <42a5878ce129403083acccf18e43363f>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline(RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, List`1, AtomicSafetyHandle)
+UnityEngine.Camera:Render()
+UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
+UnityEditor.GameObjectInspector:DoRenderPreview()
+UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
 
-========================================================================
-Received Import Request.
-  Time since last request: 16.592605 seconds.
-  path: Assets/Scripts/SelectionManager.cs
-  artifactKey: Guid(881e836176ab7d648b6ef76ec69a1638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/SelectionManager.cs using Guid(881e836176ab7d648b6ef76ec69a1638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9d1c60f26c046c775216fbd8724b37a') in 0.009178 seconds
-  Import took 0.014782 seconds .
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.029678 seconds.
-  path: Assets/Scripts/SelectionManager.cs
-  artifactKey: Guid(881e836176ab7d648b6ef76ec69a1638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/SelectionManager.cs using Guid(881e836176ab7d648b6ef76ec69a1638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9d1c60f26c046c775216fbd8724b37a') in 0.003940 seconds
-  Import took 0.009342 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.562628 seconds.
-  path: Assets/Scripts/ScoreManager.cs
-  artifactKey: Guid(519bb2a0e5dc0c24b9a4d4a5253f0c8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/ScoreManager.cs using Guid(519bb2a0e5dc0c24b9a4d4a5253f0c8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53f448df13edf7726e75c3d3076f4bfb') in 0.009478 seconds
-  Import took 0.015435 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001298 seconds.
-  path: Assets/Scripts/ScoreManager.cs
-  artifactKey: Guid(519bb2a0e5dc0c24b9a4d4a5253f0c8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/ScoreManager.cs using Guid(519bb2a0e5dc0c24b9a4d4a5253f0c8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53f448df13edf7726e75c3d3076f4bfb') in 0.004038 seconds
-  Import took 0.009690 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.274305 seconds.
-  path: Assets/Scripts/MoveList.cs
-  artifactKey: Guid(52ed64a5f077d1244a727e6ddc8a609a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MoveList.cs using Guid(52ed64a5f077d1244a727e6ddc8a609a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e85da2b8edf439ffbcbca156ced7f92c') in 0.009341 seconds
-  Import took 0.015086 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004298 seconds.
-  path: Assets/Scripts/MoveList.cs
-  artifactKey: Guid(52ed64a5f077d1244a727e6ddc8a609a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MoveList.cs using Guid(52ed64a5f077d1244a727e6ddc8a609a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e85da2b8edf439ffbcbca156ced7f92c') in 0.004029 seconds
-  Import took 0.009463 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.116312 seconds.
-  path: Assets/Scripts/MainMenuBehaviour.cs
-  artifactKey: Guid(e5490eaf4dd2cab449ecf399f8d0734e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MainMenuBehaviour.cs using Guid(e5490eaf4dd2cab449ecf399f8d0734e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '380e6c7a17d89441fcd84c77de873ec3') in 0.008296 seconds
-  Import took 0.014398 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005713 seconds.
-  path: Assets/Scripts/MainMenuBehaviour.cs
-  artifactKey: Guid(e5490eaf4dd2cab449ecf399f8d0734e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MainMenuBehaviour.cs using Guid(e5490eaf4dd2cab449ecf399f8d0734e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '380e6c7a17d89441fcd84c77de873ec3') in 0.003937 seconds
-  Import took 0.009314 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.066854 seconds.
-  path: Assets/Resources
-  artifactKey: Guid(483dd293f52956e408eedbbf943c8065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources using Guid(483dd293f52956e408eedbbf943c8065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d1f51b797a0762284b22c48672cf241') in 0.008867 seconds
-  Import took 0.014803 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.607353 seconds.
-  path: Assets/Sounds
-  artifactKey: Guid(170cb415786a6c0459a16eadaedaa441) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sounds using Guid(170cb415786a6c0459a16eadaedaa441) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d4f096845c80b6e4fbabbbdf7266b01') in 0.009215 seconds
-  Import took 0.015070 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.296866 seconds.
-  path: Assets/TextMesh Pro
-  artifactKey: Guid(f54d1bd14bd3ca042bd867b519fee8cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro using Guid(f54d1bd14bd3ca042bd867b519fee8cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0422b807d91bca404ec1c13ada9650f') in 0.009172 seconds
-  Import took 0.014899 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.147414 seconds.
-  path: Assets/Textures
-  artifactKey: Guid(7eda153449aca134a92348d47cfb4a7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures using Guid(7eda153449aca134a92348d47cfb4a7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dc6806a9a5b2ae777148425df28ed25') in 0.008340 seconds
-  Import took 0.014342 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.172915 seconds.
-  path: Assets/PostDataProcessor.cs
-  artifactKey: Guid(ed0bfd3980e04714fa07f1aa90508970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PostDataProcessor.cs using Guid(ed0bfd3980e04714fa07f1aa90508970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbf0a01b542d5d00e7bd8c30004b2290') in 0.008812 seconds
-  Import took 0.014810 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001628 seconds.
-  path: Assets/PostDataProcessor.cs
-  artifactKey: Guid(ed0bfd3980e04714fa07f1aa90508970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PostDataProcessor.cs using Guid(ed0bfd3980e04714fa07f1aa90508970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbf0a01b542d5d00e7bd8c30004b2290') in 0.003858 seconds
-  Import took 0.009395 seconds .
+ -> (artifact id: '32e44344c904d1bc73557f0ef127a329') in 0.254178 seconds
+  Import took 0.261985 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003381 seconds.
+Registered in 0.003451 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
@@ -233,23 +141,333 @@ Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
+Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.OnEnable () [0x00023] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:202 
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
 Mono: successfully reloaded assembly
-- Completed reload, in  1.229 seconds
+- Completed reload, in  1.301 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Refreshing native plugins compatible for Editor in 0.67 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3156 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 154.1 MB.
-System memory in use after: 154.3 MB.
+System memory in use before: 155.6 MB.
+System memory in use after: 155.8 MB.
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 3796.
-Total: 3.207300 ms (FindLiveObjects: 0.359300 ms CreateObjectMapping: 0.111400 ms MarkObjects: 2.633400 ms  DeleteObjects: 0.101700 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3797.
+Total: 3.515400 ms (FindLiveObjects: 0.356400 ms CreateObjectMapping: 0.092600 ms MarkObjects: 2.963000 ms  DeleteObjects: 0.101900 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003559 seconds.
+Registered in 0.003332 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.OnEnable () [0x00023] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:202 
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.275 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3156 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.6 MB.
+System memory in use after: 155.9 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3800.
+Total: 3.700800 ms (FindLiveObjects: 0.391700 ms CreateObjectMapping: 0.101500 ms MarkObjects: 3.091400 ms  DeleteObjects: 0.113800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 76.509790 seconds.
+  path: Assets/Resources/Forest.prefab
+  artifactKey: Guid(125a598f6da20b44f8fa585ad18b38ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Forest.prefab using Guid(125a598f6da20b44f8fa585ad18b38ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.Create () [0x0001a] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:92 
+  at UnityEngine.Rendering.Universal.ScriptableRendererData.InternalCreateRenderer () [0x00009] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ScriptableRendererData.cs:51 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreateRenderers () [0x00056] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Data\UniversalRenderPipelineAsset.cs:351 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006a] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Data\UniversalRenderPipelineAsset.cs:301 
+  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x00004] in <42a5878ce129403083acccf18e43363f>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline(RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, List`1, AtomicSafetyHandle)
+UnityEngine.Camera:Render()
+UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
+UnityEditor.GameObjectInspector:DoRenderPreview()
+UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
+ -> (artifact id: '8b489ed0ed2f8ee261ff37c8142f92c5') in 0.198995 seconds
+  Import took 0.207750 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003634 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.OnEnable () [0x00023] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:202 
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.248 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3156 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.7 MB.
+System memory in use after: 155.9 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3804.
+Total: 3.393900 ms (FindLiveObjects: 0.365000 ms CreateObjectMapping: 0.093900 ms MarkObjects: 2.834400 ms  DeleteObjects: 0.099100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 78.175174 seconds.
+  path: Assets/Resources/Dirt.prefab
+  artifactKey: Guid(2746d11f7a16a6c4d85adc7d4f5a191d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Dirt.prefab using Guid(2746d11f7a16a6c4d85adc7d4f5a191d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The same field name is serialized multiple times in the class or its parent class. This is not supported: Base(MonoBehaviour) block
+
+Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.Create () [0x0001a] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:92 
+  at UnityEngine.Rendering.Universal.ScriptableRendererData.InternalCreateRenderer () [0x00009] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ScriptableRendererData.cs:51 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreateRenderers () [0x00056] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Data\UniversalRenderPipelineAsset.cs:351 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006a] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Data\UniversalRenderPipelineAsset.cs:301 
+  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x00004] in <42a5878ce129403083acccf18e43363f>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline(RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, List`1, AtomicSafetyHandle)
+UnityEngine.Camera:Render()
+UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
+UnityEditor.GameObjectInspector:DoRenderPreview()
+UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
+ -> (artifact id: '55acd07838f8ca835232c3a7fdab58e5') in 0.173516 seconds
+  Import took 0.181584 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000321 seconds.
+  path: Assets/Resources/River.prefab
+  artifactKey: Guid(6e3531450b0933341aa449aa27c79144) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/River.prefab using Guid(6e3531450b0933341aa449aa27c79144) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.Create () [0x0001a] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:92 
+  at UnityEngine.Rendering.Universal.ScriptableRendererData.InternalCreateRenderer () [0x00009] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ScriptableRendererData.cs:51 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreateRenderers () [0x00056] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Data\UniversalRenderPipelineAsset.cs:351 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006a] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Data\UniversalRenderPipelineAsset.cs:301 
+  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x00004] in <42a5878ce129403083acccf18e43363f>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline(RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, List`1, AtomicSafetyHandle)
+UnityEngine.Camera:Render()
+UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
+UnityEditor.GameObjectInspector:DoRenderPreview()
+UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
+ -> (artifact id: '39052c9bc7b4a8009c103e0f435586f5') in 0.076549 seconds
+  Import took 0.084231 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/Resources/Forest.prefab
+  artifactKey: Guid(125a598f6da20b44f8fa585ad18b38ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Forest.prefab using Guid(125a598f6da20b44f8fa585ad18b38ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.Create () [0x0001a] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:92 
+  at UnityEngine.Rendering.Universal.ScriptableRendererData.InternalCreateRenderer () [0x00009] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ScriptableRendererData.cs:51 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreateRenderers () [0x00056] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Data\UniversalRenderPipelineAsset.cs:351 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006a] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Data\UniversalRenderPipelineAsset.cs:301 
+  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x00004] in <42a5878ce129403083acccf18e43363f>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline(RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, List`1, AtomicSafetyHandle)
+UnityEngine.Camera:Render()
+UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
+UnityEditor.GameObjectInspector:DoRenderPreview()
+UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
+ -> (artifact id: '2067874b2ae7d12a5c8a8a941a0d76a7') in 0.067213 seconds
+  Import took 0.074846 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/Resources/Wetland.prefab
+  artifactKey: Guid(d5670e0e9b0dd6743b561cae101ea985) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Wetland.prefab using Guid(d5670e0e9b0dd6743b561cae101ea985) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.Create () [0x0001a] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:92 
+  at UnityEngine.Rendering.Universal.ScriptableRendererData.InternalCreateRenderer () [0x00009] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ScriptableRendererData.cs:51 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreateRenderers () [0x00056] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Data\UniversalRenderPipelineAsset.cs:351 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006a] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Data\UniversalRenderPipelineAsset.cs:301 
+  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x00004] in <42a5878ce129403083acccf18e43363f>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline(RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, List`1, AtomicSafetyHandle)
+UnityEngine.Camera:Render()
+UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
+UnityEditor.GameObjectInspector:DoRenderPreview()
+UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
+ -> (artifact id: 'baa352cbb605edc213eca5e3ef13d9eb') in 0.075774 seconds
+  Import took 0.083422 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Resources/Grass.prefab
+  artifactKey: Guid(c47eaa54aeacb1448ae652855d22bde3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Grass.prefab using Guid(c47eaa54aeacb1448ae652855d22bde3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.Create () [0x0001a] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:92 
+  at UnityEngine.Rendering.Universal.ScriptableRendererData.InternalCreateRenderer () [0x00009] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ScriptableRendererData.cs:51 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreateRenderers () [0x00056] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Data\UniversalRenderPipelineAsset.cs:351 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006a] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Data\UniversalRenderPipelineAsset.cs:301 
+  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x00004] in <42a5878ce129403083acccf18e43363f>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline(RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, List`1, AtomicSafetyHandle)
+UnityEngine.Camera:Render()
+UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
+UnityEditor.GameObjectInspector:DoRenderPreview()
+UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
+ -> (artifact id: 'b716c1d15a0b94d1467b77c8b30c6111') in 0.077165 seconds
+  Import took 0.084935 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.848480 seconds.
+  path: Assets/Resources/Forest.prefab
+  artifactKey: Guid(125a598f6da20b44f8fa585ad18b38ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Forest.prefab using Guid(125a598f6da20b44f8fa585ad18b38ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.Create () [0x0001a] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:92 
+  at UnityEngine.Rendering.Universal.ScriptableRendererData.InternalCreateRenderer () [0x00009] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ScriptableRendererData.cs:51 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreateRenderers () [0x00056] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Data\UniversalRenderPipelineAsset.cs:351 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006a] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Data\UniversalRenderPipelineAsset.cs:301 
+  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x00004] in <42a5878ce129403083acccf18e43363f>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline(RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, List`1, AtomicSafetyHandle)
+UnityEngine.Camera:Render()
+UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
+UnityEditor.GameObjectInspector:DoRenderPreview()
+UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
+ -> (artifact id: '5f2057baa36d9a4827e76e4de489135d') in 0.064900 seconds
+  Import took 0.072644 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.590838 seconds.
+  path: Assets/Resources/Wetland.prefab
+  artifactKey: Guid(d5670e0e9b0dd6743b561cae101ea985) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Wetland.prefab using Guid(d5670e0e9b0dd6743b561cae101ea985) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.Create () [0x0001a] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:92 
+  at UnityEngine.Rendering.Universal.ScriptableRendererData.InternalCreateRenderer () [0x00009] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ScriptableRendererData.cs:51 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreateRenderers () [0x00056] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Data\UniversalRenderPipelineAsset.cs:351 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006a] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Data\UniversalRenderPipelineAsset.cs:301 
+  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x00004] in <42a5878ce129403083acccf18e43363f>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline(RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, List`1, AtomicSafetyHandle)
+UnityEngine.Camera:Render()
+UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
+UnityEditor.GameObjectInspector:DoRenderPreview()
+UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
+ -> (artifact id: '4e0ca4a7a6c2323c62b54023a210fa0a') in 0.071956 seconds
+  Import took 0.079747 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003500 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
@@ -258,455 +476,413 @@ Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
+Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.OnEnable () [0x00023] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:202 
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
 Mono: successfully reloaded assembly
-- Completed reload, in  1.244 seconds
+- Completed reload, in  1.276 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.67 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.71 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3156 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 154.2 MB.
-System memory in use after: 154.4 MB.
+System memory in use before: 155.8 MB.
+System memory in use after: 156.1 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3799.
-Total: 3.315800 ms (FindLiveObjects: 0.352600 ms CreateObjectMapping: 0.093500 ms MarkObjects: 2.768200 ms  DeleteObjects: 0.099800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 226.316083 seconds.
-  path: Packages/com.unity.postprocessing/package.json
-  artifactKey: Guid(2705889b3a9580a47b334f039bfdcb00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.postprocessing/package.json using Guid(2705889b3a9580a47b334f039bfdcb00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb355d830228c7d14609d427beca0927') in 0.037519 seconds
-  Import took 0.043863 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.415929 seconds.
-  path: Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/AutoExposure.compute
-  artifactKey: Guid(34845e0ca016b7448842e965db5890a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/AutoExposure.compute using Guid(34845e0ca016b7448842e965db5890a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cfa99c3edca1ab955f440e22bae8f19') in 0.013699 seconds
-  Import took 0.019747 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000297 seconds.
-  path: Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/MultiScaleVODownsample1.compute
-  artifactKey: Guid(4c63bc487e6c29a4a99f85a6c47b292b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/MultiScaleVODownsample1.compute using Guid(4c63bc487e6c29a4a99f85a6c47b292b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b53414a061e89a50d9ea606b6f11c0dc') in 0.009829 seconds
-  Import took 0.015481 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000349 seconds.
-  path: Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/GaussianDownsample.compute
-  artifactKey: Guid(6dba4103d23a7904fbc49099355aff3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/GaussianDownsample.compute using Guid(6dba4103d23a7904fbc49099355aff3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70b7ff559c28c925c9fcd46478e1269f') in 0.010235 seconds
-  Import took 0.016264 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000327 seconds.
-  path: Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/Texture3DLerp.compute
-  artifactKey: Guid(31e9175024adfd44aba2530ff9b77494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/Texture3DLerp.compute using Guid(31e9175024adfd44aba2530ff9b77494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e814c371c26a1ee7585c0450767bb07b') in 0.009614 seconds
-  Import took 0.015337 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000289 seconds.
-  path: Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/MultiScaleVOUpsample.compute
-  artifactKey: Guid(600d6212b59bb40409d19d750b5fd1e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/MultiScaleVOUpsample.compute using Guid(600d6212b59bb40409d19d750b5fd1e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78321373d616083249acbe00b8e33fd5') in 0.009718 seconds
-  Import took 0.015290 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000294 seconds.
-  path: Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/Lut3DBaker.compute
-  artifactKey: Guid(42496b74c071f5749950ca1abe33e945) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/Lut3DBaker.compute using Guid(42496b74c071f5749950ca1abe33e945) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a423948ca5cc6829ec241873e3fe3652') in 0.009394 seconds
-  Import took 0.015282 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000346 seconds.
-  path: Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/MultiScaleVODownsample2.compute
-  artifactKey: Guid(e4d3e4779e48a374f91d48d4c0aedb7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/MultiScaleVODownsample2.compute using Guid(e4d3e4779e48a374f91d48d4c0aedb7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbbf30c3cd5f1d2e95c176534bd2a501') in 0.008708 seconds
-  Import took 0.014563 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000271 seconds.
-  path: Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/MultiScaleVORender.compute
-  artifactKey: Guid(34a460e8a2e66c243a9c12024e5a798d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/MultiScaleVORender.compute using Guid(34a460e8a2e66c243a9c12024e5a798d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d3ae08b5d14041bb9a6ed5ac0bb989d') in 0.009399 seconds
-  Import took 0.015205 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000330 seconds.
-  path: Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/ExposureHistogram.compute
-  artifactKey: Guid(8c2fcbdf9bc58664f89917f7b9d79501) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/ExposureHistogram.compute using Guid(8c2fcbdf9bc58664f89917f7b9d79501) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9abd535665b0cccf61072710c097f13') in 0.008999 seconds
-  Import took 0.014532 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.938026 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Editor/Unity.RenderPipelines.Universal.Editor.asmdef
-  artifactKey: Guid(c579267770062bf448e75eb160330b7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Editor/Unity.RenderPipelines.Universal.Editor.asmdef using Guid(c579267770062bf448e75eb160330b7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e832646f1e842ef4f8b44921f105c44') in 0.010669 seconds
-  Import took 0.016276 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.157536 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Runtime/Unity.RenderPipelines.Universal.Runtime.asmdef
-  artifactKey: Guid(15fc0a57446b3144c949da3e2b9737a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Runtime/Unity.RenderPipelines.Universal.Runtime.asmdef using Guid(15fc0a57446b3144c949da3e2b9737a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '544285283cd06ccb62c32bb5b7c7c1e0') in 0.007909 seconds
-  Import took 0.013226 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.143156 seconds.
-  path: Packages/com.unity.render-pipelines.universal/ShaderLibrary/Unity.RenderPipelines.Universal.ShaderLibrary.asmdef
-  artifactKey: Guid(ab67fb10353d84448ac887a7367cbda8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/ShaderLibrary/Unity.RenderPipelines.Universal.ShaderLibrary.asmdef using Guid(ab67fb10353d84448ac887a7367cbda8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '736c2502b6e87c22eaa6c0d0ad39e2f1') in 0.008278 seconds
-  Import took 0.013953 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.155931 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Shaders/Unity.RenderPipelines.Universal.Shaders.asmdef
-  artifactKey: Guid(b4517ec124862cb4bb3b8b27d72843a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Shaders/Unity.RenderPipelines.Universal.Shaders.asmdef using Guid(b4517ec124862cb4bb3b8b27d72843a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cce40a4e822195e79b679b5b27b1af86') in 0.007985 seconds
-  Import took 0.013623 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.725518 seconds.
-  path: Packages/com.unity.probuilder/Content/Material/Checker.mat
-  artifactKey: Guid(4717b199010ca4cb3a8a7a465ec457d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.probuilder/Content/Material/Checker.mat using Guid(4717b199010ca4cb3a8a7a465ec457d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ed2dcd773435e94e666a75dae0aa077') in 0.266228 seconds
-  Import took 0.272577 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000278 seconds.
-  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Light.ttf
-  artifactKey: Guid(2a29e27936eb547458f646f71125b264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Light.ttf using Guid(2a29e27936eb547458f646f71125b264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4397049227e3507ddae53b7a501867c') in 0.041169 seconds
-  Import took 0.046598 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000245 seconds.
-  path: Packages/com.unity.probuilder/Content/Resources/Materials/FacePicker.mat
-  artifactKey: Guid(5695904020f064fdab5ad265b274a616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.probuilder/Content/Resources/Materials/FacePicker.mat using Guid(5695904020f064fdab5ad265b274a616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bdff3be0a6456ead6ca1f12a0ac5623') in 0.022017 seconds
-  Import took 0.027776 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000309 seconds.
-  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Thin.ttf
-  artifactKey: Guid(19a9abb883540be48b75b951a927ae03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Thin.ttf using Guid(19a9abb883540be48b75b951a927ae03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67a1f0c294f4af1a6c10f71da23f953d') in 0.034148 seconds
-  Import took 0.039840 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000271 seconds.
-  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-BlackItalic.ttf
-  artifactKey: Guid(f95147a9bab9fe649b8070170fa7ebd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-BlackItalic.ttf using Guid(f95147a9bab9fe649b8070170fa7ebd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d90ab01cb6d6f980078f12bb106cea1') in 0.027332 seconds
-  Import took 0.032731 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000277 seconds.
-  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-MediumItalic.ttf
-  artifactKey: Guid(d93c1bc57fdf1ac4dad1bf04fac05464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-MediumItalic.ttf using Guid(d93c1bc57fdf1ac4dad1bf04fac05464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ea361165488e3796b5c3f3ef55b8adf') in 0.025813 seconds
-  Import took 0.030940 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000306 seconds.
-  path: Packages/com.unity.probuilder/Content/Resources/Materials/EdgePickerHDRP.mat
-  artifactKey: Guid(980c24c5a501a9a429356d191ad356a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.probuilder/Content/Resources/Materials/EdgePickerHDRP.mat using Guid(980c24c5a501a9a429356d191ad356a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f11bf14d83411748dae3cff13f2e548') in 0.016276 seconds
-  Import took 0.021604 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000292 seconds.
-  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Bold.ttf
-  artifactKey: Guid(3750c318f40cab44a97d3a81beaefeb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Bold.ttf using Guid(3750c318f40cab44a97d3a81beaefeb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73bfb1616915f9871621305c9dc56d55') in 0.026078 seconds
-  Import took 0.031715 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000455 seconds.
-  path: Packages/com.unity.probuilder/Content/Resources/Materials/EdgePicker.mat
-  artifactKey: Guid(4ff996e3a0a5743a3987ab6231160665) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.probuilder/Content/Resources/Materials/EdgePicker.mat using Guid(4ff996e3a0a5743a3987ab6231160665) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0e95b02c49d1a26787c78606e7bf5e6') in 0.017768 seconds
-  Import took 0.023392 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000292 seconds.
-  path: Packages/com.unity.probuilder/Content/Resources/Materials/Collider.mat
-  artifactKey: Guid(bbb235fff4f48426b863b36058ab66d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.probuilder/Content/Resources/Materials/Collider.mat using Guid(bbb235fff4f48426b863b36058ab66d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba9781b54142e5676f27d5ea4efb4d41') in 0.022767 seconds
-  Import took 0.028543 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000332 seconds.
-  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Italic.ttf
-  artifactKey: Guid(c839255fc8f6b4b4d90bf8c1af9f9bd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Italic.ttf using Guid(c839255fc8f6b4b4d90bf8c1af9f9bd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9846ce79ac2a60a138327a2d7fe9e3d7') in 0.028563 seconds
-  Import took 0.034865 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000298 seconds.
-  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-ThinItalic.ttf
-  artifactKey: Guid(b2ea3b3f1765e544b9eb5bd1a93a91ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-ThinItalic.ttf using Guid(b2ea3b3f1765e544b9eb5bd1a93a91ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0e18d466eaa5d1ffe289faeef320e2b') in 0.027060 seconds
-  Import took 0.033103 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000287 seconds.
-  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Black.ttf
-  artifactKey: Guid(1062c701058745940ae5dca6219c64c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Black.ttf using Guid(1062c701058745940ae5dca6219c64c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94d38a8368d0b55b890ea8a58733c952') in 0.028057 seconds
-  Import took 0.034180 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000335 seconds.
-  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Regular.ttf
-  artifactKey: Guid(30dc370b164eefc43b95744fc796dad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Regular.ttf using Guid(30dc370b164eefc43b95744fc796dad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18be406ff656943e1d34e5b1a8406ba6') in 0.025398 seconds
-  Import took 0.031623 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000326 seconds.
-  path: Packages/com.unity.probuilder/Content/Resources/Materials/FacePickerHDRP.mat
-  artifactKey: Guid(a53ef0dd76f2fe74eb5f43267d7c0195) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.probuilder/Content/Resources/Materials/FacePickerHDRP.mat using Guid(a53ef0dd76f2fe74eb5f43267d7c0195) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a62a49a5132e21c31bae0e5239d6f07a') in 0.016618 seconds
-  Import took 0.022529 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000282 seconds.
-  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Medium.ttf
-  artifactKey: Guid(a51a3aebb43ac044989270407476b208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Medium.ttf using Guid(a51a3aebb43ac044989270407476b208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bedf3512de8987f90bb92a0612d9850') in 0.026157 seconds
-  Import took 0.031955 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000335 seconds.
-  path: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Fonts/Perfect DOS VGA 437.ttf
-  artifactKey: Guid(74a5091d8707f334b9a5c31ef71a64ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Fonts/Perfect DOS VGA 437.ttf using Guid(74a5091d8707f334b9a5c31ef71a64ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ddd76e86d4c0a2d2612a5b2b92f0ee6') in 0.023391 seconds
-  Import took 0.029302 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000303 seconds.
-  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-BoldItalic.ttf
-  artifactKey: Guid(dfb97a9307a577a41bcacba34b9a7e32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-BoldItalic.ttf using Guid(dfb97a9307a577a41bcacba34b9a7e32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50ba5f817a69afb8676b9734b8748226') in 0.032341 seconds
-  Import took 0.038255 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000297 seconds.
-  path: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Fonts/Perfect DOS VGA 437.ttf
-  artifactKey: Guid(74a5091d8707f334b9a5c31ef71a64ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Fonts/Perfect DOS VGA 437.ttf using Guid(74a5091d8707f334b9a5c31ef71a64ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ddd76e86d4c0a2d2612a5b2b92f0ee6') in 0.021538 seconds
-  Import took 0.027156 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000292 seconds.
-  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-BoldItalic.ttf
-  artifactKey: Guid(dfb97a9307a577a41bcacba34b9a7e32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-BoldItalic.ttf using Guid(dfb97a9307a577a41bcacba34b9a7e32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50ba5f817a69afb8676b9734b8748226') in 0.016142 seconds
-  Import took 0.021840 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000306 seconds.
-  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-LightItalic.ttf
-  artifactKey: Guid(5e63515167650a541b309ba3bfd4db3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-LightItalic.ttf using Guid(5e63515167650a541b309ba3bfd4db3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a3a8ab0ade506be7826897eaa9627e9') in 0.026654 seconds
-  Import took 0.032666 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.783116 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain
-  artifactKey: Guid(35e7db2dee6acee439714675bb2193f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Textures/FilmGrain using Guid(35e7db2dee6acee439714675bb2193f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '050b271ba1088a3fc4b5ae629f9525f6') in 0.008688 seconds
-  Import took 0.014725 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.171143 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Runtime/Overrides/FilmGrain.cs
-  artifactKey: Guid(29fa0085f50d5e54f8144f766051a691) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Runtime/Overrides/FilmGrain.cs using Guid(29fa0085f50d5e54f8144f766051a691) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd05f5e9fd6941665b15f6e260bb7402') in 0.003910 seconds
-  Import took 0.010079 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004664 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Runtime/Overrides/FilmGrain.cs
-  artifactKey: Guid(29fa0085f50d5e54f8144f766051a691) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Runtime/Overrides/FilmGrain.cs using Guid(29fa0085f50d5e54f8144f766051a691) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd05f5e9fd6941665b15f6e260bb7402') in 0.003775 seconds
-  Import took 0.009149 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.237115 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Editor/Overrides/FilmGrainEditor.cs
-  artifactKey: Guid(38f8c5e5ea2961a43b1bb65bf161393c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Editor/Overrides/FilmGrainEditor.cs using Guid(38f8c5e5ea2961a43b1bb65bf161393c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c3e68e851e5bf9be0abed1a704b72d2') in 0.008149 seconds
-  Import took 0.013660 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001180 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Editor/Overrides/FilmGrainEditor.cs
-  artifactKey: Guid(38f8c5e5ea2961a43b1bb65bf161393c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Editor/Overrides/FilmGrainEditor.cs using Guid(38f8c5e5ea2961a43b1bb65bf161393c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c3e68e851e5bf9be0abed1a704b72d2') in 0.003958 seconds
-  Import took 0.009208 seconds .
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3808.
+Total: 3.548300 ms (FindLiveObjects: 0.440100 ms CreateObjectMapping: 0.104500 ms MarkObjects: 2.906100 ms  DeleteObjects: 0.095300 ms)
 
 ========================================================================
 Received Prepare
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 2.65 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 2.63 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 97.4 MB.
-System memory in use after: 97.6 MB.
+System memory in use before: 93.7 MB.
+System memory in use after: 94.0 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3910.
-Total: 3.896900 ms (FindLiveObjects: 0.383700 ms CreateObjectMapping: 0.092000 ms MarkObjects: 3.315900 ms  DeleteObjects: 0.103600 ms)
-
-========================================================================
-Received Prepare
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 2.49 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 97.4 MB.
-System memory in use after: 97.6 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3910.
-Total: 4.247700 ms (FindLiveObjects: 0.434300 ms CreateObjectMapping: 0.095500 ms MarkObjects: 3.613800 ms  DeleteObjects: 0.101700 ms)
-
-========================================================================
-Received Prepare
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 3.01 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 97.4 MB.
-System memory in use after: 97.6 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3910.
-Total: 4.383900 ms (FindLiveObjects: 0.529600 ms CreateObjectMapping: 0.123900 ms MarkObjects: 3.622000 ms  DeleteObjects: 0.107000 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 2449.538657 seconds.
-  path: Assets/Sounds/deerRun.aup3
-  artifactKey: Guid(54c7a11ecf558524893dd58b9f6209d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sounds/deerRun.aup3 using Guid(54c7a11ecf558524893dd58b9f6209d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1626b1995fdacb7e28be406a3068491c') in 0.028756 seconds
-  Import took 0.035025 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 54.024666 seconds.
-  path: Assets/Sounds/upgrade.aup3
-  artifactKey: Guid(944fb10ca331c694cb6b0c7098b5803e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sounds/upgrade.aup3 using Guid(944fb10ca331c694cb6b0c7098b5803e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40bf6246e4fcef03d9a19b935c3d07f7') in 0.010038 seconds
-  Import took 0.015614 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3312.043011 seconds.
-  path: Assets/Settings/Settings.asset
-  artifactKey: Guid(bfb43b4dcd5b53a428cdf8ec06a7b7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Settings/Settings.asset using Guid(bfb43b4dcd5b53a428cdf8ec06a7b7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'facceff93a4100e934893d771a8ae1b0') in 0.257685 seconds
-  Import took 0.271630 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 555.969031 seconds.
-  path: Assets/Scenes/MainMenuScene.unity
-  artifactKey: Guid(59d310e071d22a24dbf56c0a0fbb9c34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MainMenuScene.unity using Guid(59d310e071d22a24dbf56c0a0fbb9c34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba5c0cfabc6b0be9bc37ff4758ac2fee') in 0.011226 seconds
-  Import took 0.018219 seconds .
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3808.
+Total: 3.049300 ms (FindLiveObjects: 0.378700 ms CreateObjectMapping: 0.090100 ms MarkObjects: 2.473800 ms  DeleteObjects: 0.105400 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003955 seconds.
+Registered in 0.003436 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.86 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.72 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.628 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.05 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3156 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 160.7 MB.
-System memory in use after: 160.9 MB.
+Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.OnEnable () [0x00023] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:202 
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3887.
-Total: 16.841200 ms (FindLiveObjects: 1.659200 ms CreateObjectMapping: 0.496600 ms MarkObjects: 14.176300 ms  DeleteObjects: 0.502300 ms)
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004115 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.74 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.403 seconds
+- Completed reload, in  1.289 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Refreshing native plugins compatible for Editor in 0.65 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3156 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 161.0 MB.
-System memory in use after: 161.2 MB.
+System memory in use before: 155.9 MB.
+System memory in use after: 156.1 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3890.
-Total: 5.497900 ms (FindLiveObjects: 0.397600 ms CreateObjectMapping: 0.100600 ms MarkObjects: 2.913300 ms  DeleteObjects: 2.085000 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3811.
+Total: 3.925800 ms (FindLiveObjects: 0.452800 ms CreateObjectMapping: 0.094100 ms MarkObjects: 3.244800 ms  DeleteObjects: 0.132300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003492 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.OnEnable () [0x00023] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:202 
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.338 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3156 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.9 MB.
+System memory in use after: 156.1 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3814.
+Total: 4.207900 ms (FindLiveObjects: 0.470100 ms CreateObjectMapping: 0.101400 ms MarkObjects: 3.492200 ms  DeleteObjects: 0.142600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003512 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.OnEnable () [0x00023] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:202 
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.316 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3156 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.0 MB.
+System memory in use after: 156.2 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3817.
+Total: 6.629500 ms (FindLiveObjects: 1.367600 ms CreateObjectMapping: 0.699000 ms MarkObjects: 4.404300 ms  DeleteObjects: 0.155400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004146 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.OnEnable () [0x00023] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:202 
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.349 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3156 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.2 MB.
+System memory in use after: 156.4 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3820.
+Total: 4.828000 ms (FindLiveObjects: 0.592400 ms CreateObjectMapping: 0.134400 ms MarkObjects: 3.968400 ms  DeleteObjects: 0.130700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003477 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.OnEnable () [0x00023] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:202 
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.416 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3156 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.5 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3823.
+Total: 3.693200 ms (FindLiveObjects: 0.405200 ms CreateObjectMapping: 0.096400 ms MarkObjects: 3.080800 ms  DeleteObjects: 0.109400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003820 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.OnEnable () [0x00023] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:202 
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.567 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3156 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.5 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3826.
+Total: 3.813000 ms (FindLiveObjects: 0.378600 ms CreateObjectMapping: 0.092700 ms MarkObjects: 3.189900 ms  DeleteObjects: 0.148600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003360 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.OnEnable () [0x00023] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:202 
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.228 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3156 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.5 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3829.
+Total: 3.428000 ms (FindLiveObjects: 0.373700 ms CreateObjectMapping: 0.096000 ms MarkObjects: 2.856600 ms  DeleteObjects: 0.100200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003441 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.OnEnable () [0x00023] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:202 
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.246 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3156 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.4 MB.
+System memory in use after: 156.6 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3832.
+Total: 3.585400 ms (FindLiveObjects: 0.399800 ms CreateObjectMapping: 0.093600 ms MarkObjects: 2.982100 ms  DeleteObjects: 0.108500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003560 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.OnEnable () [0x00023] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:202 
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.326 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3156 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.4 MB.
+System memory in use after: 156.6 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3835.
+Total: 3.541900 ms (FindLiveObjects: 0.432400 ms CreateObjectMapping: 0.093500 ms MarkObjects: 2.916900 ms  DeleteObjects: 0.097600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003897 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.OnEnable () [0x00023] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:202 
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.277 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3156 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.4 MB.
+System memory in use after: 156.7 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3838.
+Total: 3.717100 ms (FindLiveObjects: 0.418300 ms CreateObjectMapping: 0.106200 ms MarkObjects: 3.076700 ms  DeleteObjects: 0.114500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003629 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Exception: Cannot load. Incorrect path: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+  at UnityEngine.Rendering.ResourceReloader.TryReloadAllNullIn (System.Object container, System.String basePath) [0x0005f] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs:40 
+  at UnityEngine.Rendering.Universal.ForwardRendererData.OnEnable () [0x00023] in C:\Users\will_\Terraformini\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\ForwardRendererData.cs:202 
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.core@10.3.2/Runtime/Utilities/ResourceReloader.cs Line: 40)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.308 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3156 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.5 MB.
+System memory in use after: 156.7 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3841.
+Total: 3.724700 ms (FindLiveObjects: 0.385800 ms CreateObjectMapping: 0.111200 ms MarkObjects: 3.120800 ms  DeleteObjects: 0.105200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012391 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.362 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3166 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 159.4 MB.
+System memory in use after: 159.6 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3854.
+Total: 4.038700 ms (FindLiveObjects: 0.442000 ms CreateObjectMapping: 0.100100 ms MarkObjects: 3.387000 ms  DeleteObjects: 0.108000 ms)
+
+========================================================================
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.0 MB.
+System memory in use after: 97.2 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3854.
+Total: 3.339200 ms (FindLiveObjects: 0.492200 ms CreateObjectMapping: 0.091400 ms MarkObjects: 2.645400 ms  DeleteObjects: 0.109100 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

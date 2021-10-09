@@ -2002,6 +2002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc4dd79dea043be42a5827255a63792f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 1560450492}
   levelUpClips: []
@@ -2012,7 +2013,6 @@ MonoBehaviour:
   hasXAnimals: 0
   xAnimals: {fileID: 0}
   isInMoveList: 0
-  block: {fileID: 0}
 --- !u!65 &41198986
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10397,6 +10397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a32f01f561e7f4a91c178eed8220df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 1087610326}
   levelUpClips:
@@ -13947,6 +13948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dabca0fa9331264085418abd78985c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 1683632118}
   levelUpClips:
@@ -14309,6 +14311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a32f01f561e7f4a91c178eed8220df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 620785028}
   levelUpClips:
@@ -15478,6 +15481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a32f01f561e7f4a91c178eed8220df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 1720448867}
   levelUpClips:
@@ -22265,6 +22269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dabca0fa9331264085418abd78985c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 815412178}
   levelUpClips:
@@ -25752,6 +25757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc4dd79dea043be42a5827255a63792f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 749580558}
   levelUpClips: []
@@ -25762,7 +25768,6 @@ MonoBehaviour:
   hasXAnimals: 0
   xAnimals: {fileID: 0}
   isInMoveList: 0
-  block: {fileID: 0}
 --- !u!65 &493110839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26480,6 +26485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dabca0fa9331264085418abd78985c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 1540719208}
   levelUpClips:
@@ -33140,6 +33146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dabca0fa9331264085418abd78985c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 33344469}
   levelUpClips:
@@ -37550,6 +37557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e13576f715a404091c082259710873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 1522218884}
   levelUpClips:
@@ -46329,6 +46337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e13576f715a404091c082259710873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 2132596075}
   levelUpClips:
@@ -51094,6 +51103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e13576f715a404091c082259710873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 1266517730}
   levelUpClips:
@@ -51311,6 +51321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a32f01f561e7f4a91c178eed8220df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 1422229914}
   levelUpClips:
@@ -55708,6 +55719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a32f01f561e7f4a91c178eed8220df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 1521851567}
   levelUpClips:
@@ -59974,6 +59986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e13576f715a404091c082259710873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 1920439595}
   levelUpClips:
@@ -73278,6 +73291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a32f01f561e7f4a91c178eed8220df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 295631665}
   levelUpClips:
@@ -82000,6 +82014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dabca0fa9331264085418abd78985c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 1186256580}
   levelUpClips:
@@ -85788,6 +85803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a32f01f561e7f4a91c178eed8220df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 1928998376}
   levelUpClips:
@@ -88402,6 +88418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e13576f715a404091c082259710873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 770512997}
   levelUpClips:
@@ -98048,8 +98065,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 46
-  m_fontSizeBase: 46
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -104452,6 +104469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dabca0fa9331264085418abd78985c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 2121564375}
   levelUpClips:
@@ -108148,8 +108166,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -570.1, y: 288.09}
-  m_SizeDelta: {x: -100, y: -50}
+  m_AnchoredPosition: {x: -570.1, y: 260.495}
+  m_SizeDelta: {x: -100, y: -105.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1966500299
 MonoBehaviour:
@@ -114709,8 +114727,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -515.37, y: 284.40002}
-  m_SizeDelta: {x: 0, y: -50}
+  m_AnchoredPosition: {x: -515.37, y: 265.7}
+  m_SizeDelta: {x: 0, y: -87.400055}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2098792722
 MonoBehaviour:
@@ -116252,6 +116270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dabca0fa9331264085418abd78985c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
   bonusesAwarded: 
   highlight: {fileID: 1302079163}
   levelUpClips:

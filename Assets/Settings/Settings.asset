@@ -19,10 +19,10 @@ MonoBehaviour:
   tileYScaleAdjustment: 0.05
   timeBetweenForestTiles: 0.1
   tileMoveDuration: 0.5
-  startingNumberOfMoves: 10
+  startingNumberOfMoves: 8
   startingGridSize: 4
   movesToAddOnExtend: 5
-  startingTargetScore: 25
+  startingTargetScore: 24
   targetScoreMultiplier: 4
   numActiveBonuses: 2
   highScore: 30

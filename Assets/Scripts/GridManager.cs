@@ -158,7 +158,8 @@ public class GridManager : MonoBehaviour
             // pass in true so we might generate water tiles too
             moveList.GenerateRandomMove(true);
         }
-        targetScoreForExtend = gridSize * 3 * settings.targetScoreMultiplier;
+        //targetScoreForExtend = gridSize * 3 * settings.targetScoreMultiplier;
+        targetScoreForExtend += (gridSize * gridSize);
         scoreManager.UpdateTarget(targetScoreForExtend);
 
         DOTween.To(
