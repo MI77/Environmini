@@ -7,7 +7,7 @@ using DG.Tweening;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
-public class GridManager : MonoBehaviour
+public class GridManager : MonoBehaviour, IGridManager
 {
     [SerializeField] public int gridSize;
     public Dictionary<Point, Tile> tiles;
@@ -17,7 +17,7 @@ public class GridManager : MonoBehaviour
     public SettingsSO settings;
 
     public MoveList moveList;
-    
+
     public int totalScore = 0;
     public int targetScoreForExtend;
     public ScoreManager scoreManager;
@@ -26,25 +26,13 @@ public class GridManager : MonoBehaviour
     public BonusManager bonusManager;
     public MainMenuBehaviour menuManager;
 
-    public GameObject teststuff;
-    
     public Camera gridCamera;
 
     public Texture2D timerCursor;
     public Texture2D pointerCursor;
 
     private bool turnIsProcessed = false;
-
-
-    protected enum GridState
-    { AwaitingInput, SettingTiles }
-
-    void Awake()
-    {
-        if(teststuff != null)
-            teststuff.SetActive(false);
-
-    }
+    private bool irregularGrid = false;
 
     private void Update()
     {
@@ -66,13 +54,9 @@ public class GridManager : MonoBehaviour
         targetScoreForExtend = settings.startingTargetScore;
         scoreManager.UpdateTarget(targetScoreForExtend);
         //restartButton.SetActive(false);
-        DOTween.To(
-            () => gridCamera.orthographicSize,
-            x => gridCamera.orthographicSize = x,
-            28.6f,
-            0.5f
-            );
-        
+        // TODO : this should re-center on the tiles
+        ZoomCamera(28.6f);
+
         // Create a new tile dictionary if this is the first game
         if (tiles == null)
             tiles = new Dictionary<Point, Tile>();
@@ -88,6 +72,17 @@ public class GridManager : MonoBehaviour
             scoreManager.ResetUILabels();
         }
 
+        // Create the board
+        // from child gameobjects
+        if (transform.childCount != 0)
+            CreateBoardFromPlacedTiles();
+        else // from nothing
+            CreateDefaultBoard();
+
+    }
+
+    private void CreateDefaultBoard()
+    {
         // Create the blank board
         for (int x = 1; x <= gridSize; x++)
         {
@@ -95,10 +90,9 @@ public class GridManager : MonoBehaviour
             {
                 SpawnTile(x, z, TileType.Dirt);
             }
-        }    
+        }
     }
 
-    
     private void SpawnTile(int x, int z, TileType type)
     {
         GameObject prefabToSpawn;
@@ -153,24 +147,15 @@ public class GridManager : MonoBehaviour
 
     public void ExtendGrid()
     {
-        for (int i = 0; i < settings.movesToAddOnExtend; i++)
-        {
-            // pass in true so we might generate water tiles too
-            moveList.GenerateRandomMove(true);
-        }
+        AddMovesOnExtend();
         //targetScoreForExtend = gridSize * 3 * settings.targetScoreMultiplier;
         targetScoreForExtend += (gridSize * gridSize);
         scoreManager.UpdateTarget(targetScoreForExtend);
 
-        DOTween.To(
-            () => gridCamera.orthographicSize, 
-            x => gridCamera.orthographicSize = x, 
-            gridCamera.orthographicSize + 10, 
-            0.5f
-            );
-        
+        ZoomCamera(gridCamera.orthographicSize + 10);
+
         //1 left edge [gridMin-1,            gridMin-1 -> gridMax+1]
-        for (int i = gridMin-1; i <= gridMax+1; i++)
+        for (int i = gridMin - 1; i <= gridMax + 1; i++)
         {
             // can't be water
             SpawnTile(gridMin - 1, i, TileType.Dirt);
@@ -191,9 +176,9 @@ public class GridManager : MonoBehaviour
         }
 
         //3 right edge [gridMax+1,            gridMax -> gridMin-1]
-        for (int i = gridMax+1; i >= gridMin-1; --i)
+        for (int i = gridMax + 1; i >= gridMin - 1; --i)
         {
-            SpawnTile(gridMax+1, i, TileType.Dirt);
+            SpawnTile(gridMax + 1, i, TileType.Dirt);
         }
         //4 bottom edge [gridMin+1 -> gridMin, gridMin-1]
         for (int i = gridMax; i >= gridMin; --i)
@@ -209,13 +194,81 @@ public class GridManager : MonoBehaviour
             else
                 SpawnTile(i, gridMin - 1, TileType.Dirt);
         }
-        
+
         gridMin--;
         gridMax++;
         gridSize += 2;
 
 
     }
+
+    private void ZoomCamera(float newSize)
+    {
+        DOTween.To(
+                    () => gridCamera.orthographicSize,
+                    x => gridCamera.orthographicSize = x,
+                    newSize,
+                    0.5f
+                    );
+    }
+
+    private void AddMovesOnExtend()
+    {
+        for (int i = 0; i < settings.movesToAddOnExtend; i++)
+        {
+            // pass in true so we might generate water tiles too
+            moveList.GenerateRandomMove(true);
+        }
+    }
+
+    public void ExtendIrregularGrid()
+    {
+        AddMovesOnExtend();
+        // TODO: update targetScoreForExtend
+
+        //// Add tiles around the grid
+        // create a temp set of tiles so we do'nt extend infinitely
+        var tilesToExtend = new List<Tile>(tiles.Values);
+        foreach (var tile in tilesToExtend)
+        {
+            // does this tile have an empty space around it?
+            var pointsToCheck = new List<Point>();
+            pointsToCheck.Add(new Point(tile.position.x + 1, tile.position.z));
+            pointsToCheck.Add(new Point(tile.position.x - 1, tile.position.z));
+            pointsToCheck.Add(new Point(tile.position.x, tile.position.z + 1));
+            pointsToCheck.Add(new Point(tile.position.x, tile.position.z - 1));
+
+            foreach (var pointToCheck in pointsToCheck)
+            {
+                if (!tiles.TryGetValue(pointToCheck, out _))
+                {
+                    // TODO: check if this needs to be river?
+                    SpawnTile(pointToCheck.x, pointToCheck.z, TileType.Dirt);
+                }
+            }
+
+        }
+
+        // TODO: re-center camera on new set of tiles 
+        ZoomCamera(gridCamera.orthographicSize + 10);
+
+        // TODO: update gridMin/gridMax?
+    }
+
+    private void CreateBoardFromPlacedTiles()
+    {
+        irregularGrid = true;
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            var go = transform.GetChild(i);
+            AddTileToGrid(
+                (int)go.transform.position.x / 10,
+                (int)go.transform.position.z / 10,
+                go.GetComponent<Tile>());
+        }
+    }
+
+
 
     private void HandleScoreChanged(int score)
     {
@@ -240,10 +293,10 @@ public class GridManager : MonoBehaviour
         GameObject sourceTileGO = sourceTile.gameObject;
 
         sourceTile.isInMoveList = false;
-        
+
         // is the new tile the same type as the old one?
         if (targetTile.TileType == sourceTile.TileType)
-            // it is, so we'll level it up
+        // it is, so we'll level it up
         {
             // check if the new one has animals, enable on the other if it does
             if (sourceTile.hasXAnimals)
@@ -253,16 +306,16 @@ public class GridManager : MonoBehaviour
             Destroy(sourceTileGO);
         }
         else if (targetTile.TileType == TileType.Water)
-            // water tiles can't be changed
+        // water tiles can't be changed
         {
             Destroy(sourceTileGO);
         }
         else
-            // replace the tile with the new one
+        // replace the tile with the new one
         {
             // reparent under Grid
             sourceTileGO.transform.parent = this.transform;
-            
+
             // hide the target
             targetTile.enabled = false;
 
@@ -297,7 +350,11 @@ public class GridManager : MonoBehaviour
     {
         if (CalculateScore() >= targetScoreForExtend)
         {
-            ExtendGrid();
+            if (irregularGrid)
+                ExtendIrregularGrid();
+            else
+                ExtendGrid();
+
         }
 
         if (moveList.movesLeft == 0)
@@ -326,8 +383,8 @@ public class GridManager : MonoBehaviour
         return thisScore;
     }
 
-   // public void SaveScore() => settings.Scores.Add(totalScore);
-            
+    // public void SaveScore() => settings.Scores.Add(totalScore);
+
 }
 public struct Point
 {

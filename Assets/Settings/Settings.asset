@@ -22,7 +22,7 @@ MonoBehaviour:
   startingNumberOfMoves: 8
   startingGridSize: 4
   movesToAddOnExtend: 5
-  startingTargetScore: 24
+  startingTargetScore: 23
   targetScoreMultiplier: 4
   numActiveBonuses: 2
   highScore: 30
