@@ -115,19 +115,19 @@ public abstract class Tile : MonoBehaviour
             var maxTilesToCheck = settings.animalTilesToRun;
 
             // work out how far to run
-            // TODO : How can I do this recursively to deal with odd-sized boards?
-            // See also: River.LevelUpSurroundingTiles
+            // Keep checking until we hit the edge of the board, to deal with arbitrary-sized/shaped grids
+            // (can't handle gaps or u-shaped boards, but maybe that's ok? Animals don't jump over the gaps!)
             bool stopPos = false, stopNeg = false;
-            int i = 0, posTiles = 0, negTiles = 0;
+            int i = 1, posTiles = 0, negTiles = 0;
 
-            while ((!stopPos && !stopNeg) || i == maxTilesToCheck)
+            while (!stopPos || !stopNeg)
             {
-                if (gridManager.Tiles.TryGetValue(new Point(position.x + i, position.z), out nTile))
+                if (gridManager.Tiles.TryGetValue(new Point(position.x + i, position.z), out nTile) && !stopPos)
                     posTiles = i;
                 else
                     stopPos = true;
 
-                if (gridManager.Tiles.TryGetValue(new Point(position.x - i, position.z), out nTile))
+                if (gridManager.Tiles.TryGetValue(new Point(position.x - i, position.z), out nTile) && !stopNeg)
                     negTiles = i;
                 else
                     stopNeg = true;
@@ -135,18 +135,23 @@ public abstract class Tile : MonoBehaviour
                 i++;
             }
 
+            // Cut the running short if we hit maxTilesToCheck
+            // TODO : merge this into the while check above
+            // otherwise we're checking all the way to the edge unnecessarily
             int tilesToward = Math.Min(maxTilesToCheck, posTiles);
             int tilesAway = Math.Min(maxTilesToCheck, negTiles);
 
 
-
+            // start the running animation
             StartCoroutine(xAnimals.AnimalRun(tilesToward, tilesAway));
 
-            for (int j = 1; j <= maxTilesToCheck; j++)
+            // actually update the tiles. We do the weird double loop so they get
+            // set towards and away from the camera at the same time
+            for (int j = 1,k = 1; j <= tilesToward || k <= tilesAway; j++, k++)
             {
-                if (gridManager.Tiles.TryGetValue(new Point(position.x + j, position.z), out nTile))
+                if (j <= tilesToward && gridManager.Tiles.TryGetValue(new Point(position.x + j, position.z), out nTile))
                     SetTypeOnTile(nTile, prefab, gridManager);
-                if (gridManager.Tiles.TryGetValue(new Point(position.x - j, position.z), out nTile))
+                if (k <= tilesAway && gridManager.Tiles.TryGetValue(new Point(position.x - k, position.z), out nTile))
                     SetTypeOnTile(nTile, prefab, gridManager);
                 yield return new WaitForSeconds(settings.timeBetweenAnimalTiles);
             }

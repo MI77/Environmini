@@ -7,7 +7,7 @@ public class River : Tile
     public override TileType TileType => TileType.Water;
     public override GameObject GetPrefab() => Resources.Load("River") as GameObject;
     public override bool CanSetTile => false;
-    public IGridManager gridManager;
+    public GridManager gridManager;
 
     public override void LevelUpSelf()
     {
@@ -26,9 +26,7 @@ public class River : Tile
 
     private void Awake()
     {
-        gridManager = FindObjectOfType<GridManager>();
-        if(gridManager == null)
-            gridManager = FindObjectOfType<IrregularGridManager>();
+        gridManager = (GridManager)FindObjectOfType(typeof(GridManager));
         levelUpNoise = this.gameObject.AddComponent<AudioSource>();
     }
     public override IEnumerator LevelUpSurroundingTiles(IGridManager gridManager)
@@ -38,21 +36,17 @@ public class River : Tile
 
         bool stopNeg = false, stopPos = false;
         int i = 0;
-        // TODO : how can I do this incrementally / recursively to deal with arbitrary-sized grids?
-        // (See also Tile.LevelUpAnimalTiles)
+        // Keep checking until we hit the edge of the board, to deal with arbitrary-sized/shaped grids
+        // (can't handle gaps or u-shaped boards, but maybe that's ok? Water wouldn't flow over the gaps!)
         while (!stopPos && !stopNeg)
         {
             if (tiles.TryGetValue(new Point(position.x, position.z + i), out nTile))
-            {
                 SetTypeOnTile(nTile, settings.riverPrefab, gridManager);
-            }
             else
                 stopPos = true;
 
             if (tiles.TryGetValue(new Point(position.x, position.z - i), out nTile))
-            {
                 SetTypeOnTile(nTile, settings.riverPrefab, gridManager);
-            }
             else
                 stopNeg = true;
 

@@ -421,12 +421,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 342275075}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52ed64a5f077d1244a727e6ddc8a609a, type: 3}
+  m_Script: {fileID: 11500000, guid: 3330973059999304abc91da2bda4add3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveList: []
-  settings: {fileID: 11400000, guid: bfb43b4dcd5b53a428cdf8ec06a7b7c9, type: 2}
-  debugMoveList: []
+  settings: {fileID: 11400000, guid: e6adb649ca997754ca8d10b24096e26d, type: 2}
+  debugMoveList:
+  - {fileID: 7023756065788858252, guid: c47eaa54aeacb1448ae652855d22bde3, type: 3}
+  - {fileID: 4105891221220059404, guid: d5670e0e9b0dd6743b561cae101ea985, type: 3}
+  - {fileID: 4105891221220059404, guid: d5670e0e9b0dd6743b561cae101ea985, type: 3}
+  - {fileID: 4105891221220059404, guid: d5670e0e9b0dd6743b561cae101ea985, type: 3}
+  - {fileID: 4105891221220059404, guid: d5670e0e9b0dd6743b561cae101ea985, type: 3}
+  - {fileID: 3183793768399989323, guid: 6e3531450b0933341aa449aa27c79144, type: 3}
+  animals: 000100000000
 --- !u!4 &342275077
 Transform:
   m_ObjectHideFlags: 0
@@ -3462,8 +3469,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1618893154}
-  - component: {fileID: 1618893155}
   - component: {fileID: 1618893153}
+  - component: {fileID: 1618893155}
   m_Layer: 6
   m_Name: GridManager
   m_TagString: GridManager
@@ -3718,8 +3725,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5490eaf4dd2cab449ecf399f8d0734e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstScene: {fileID: 0}
-  mainMenuScene: {fileID: 0}
   mainMenu: {fileID: 2022806255}
   gameOverMenu: {fileID: 543365159}
   creditsMenu: {fileID: 2038276054}
