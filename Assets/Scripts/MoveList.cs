@@ -1,9 +1,6 @@
 using DG.Tweening;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using System.Threading.Tasks;
 using UnityEngine;
 
 public class MoveList : MonoBehaviour
@@ -16,11 +13,7 @@ public class MoveList : MonoBehaviour
     private readonly System.Random random;
     public List<GameObject> debugMoveList;
 
-    private void Awake()
-    {
-        //GenerateMoveList();
-    }
-    public void GenerateMoveList()
+    public virtual void GenerateMoveList()
     {
         // clear the internal list
         moveList.Clear();
@@ -94,14 +87,25 @@ public class MoveList : MonoBehaviour
         SpawnTile(spawnedTile);
     }
 
-    private void SpawnTile(GameObject spawnedTile)
+    protected void SpawnTile(GameObject spawnedTile, [Optional] bool withAnimals)
     {
         var tile = spawnedTile.GetComponent<Tile>();
         //Add animals to grass tiles
         if (tile.TileType == TileType.Grass || tile.TileType == TileType.Wetland)
         {
-            if (UnityEngine.Random.value < settings.animalChance)
+            if (withAnimals)
+            {
                 tile.EnableXAnimals();
+            }
+            else if (!withAnimals)
+            {
+
+            }
+            else
+            {
+                if (UnityEngine.Random.value < settings.animalChance)
+                    tile.EnableXAnimals();
+            }
         }
 
         // set the location etc.

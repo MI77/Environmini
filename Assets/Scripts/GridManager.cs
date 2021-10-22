@@ -1,16 +1,12 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using DG.Tweening;
-using System.Runtime.InteropServices;
-using System.Threading.Tasks;
 
 public class GridManager : MonoBehaviour, IGridManager
 {
     [SerializeField] public int gridSize;
-    public Dictionary<Point, Tile> tiles;
+    private Dictionary<Point, Tile> tiles;
     public int gridMin = 1;
     public int gridMax;
 
@@ -21,7 +17,6 @@ public class GridManager : MonoBehaviour, IGridManager
     public int totalScore = 0;
     public int targetScoreForExtend;
     public ScoreManager scoreManager;
-    public GameObject restartButton;
 
     public BonusManager bonusManager;
     public MainMenuBehaviour menuManager;
@@ -32,7 +27,8 @@ public class GridManager : MonoBehaviour, IGridManager
     public Texture2D pointerCursor;
 
     private bool turnIsProcessed = false;
-    private bool irregularGrid = false;
+
+    public Dictionary<Point, Tile> Tiles { get => tiles; set => tiles = value; }
 
     private void Update()
     {
@@ -58,12 +54,12 @@ public class GridManager : MonoBehaviour, IGridManager
         ZoomCamera(28.6f);
 
         // Create a new tile dictionary if this is the first game
-        if (tiles == null)
-            tiles = new Dictionary<Point, Tile>();
+        if (Tiles == null)
+            Tiles = new Dictionary<Point, Tile>();
         else
         // Clear the dict, destroy any tiles on the grid, reset the score
         {
-            tiles.Clear();
+            Tiles.Clear();
             for (int i = 0; i < this.transform.childCount; i++)
             {
                 Destroy(transform.GetChild(i).gameObject);
@@ -73,15 +69,11 @@ public class GridManager : MonoBehaviour, IGridManager
         }
 
         // Create the board
-        // from child gameobjects
-        if (transform.childCount != 0)
-            CreateBoardFromPlacedTiles();
-        else // from nothing
-            CreateDefaultBoard();
+        CreateBoard();
 
     }
 
-    private void CreateDefaultBoard()
+    protected virtual void CreateBoard()
     {
         // Create the blank board
         for (int x = 1; x <= gridSize; x++)
@@ -93,7 +85,7 @@ public class GridManager : MonoBehaviour, IGridManager
         }
     }
 
-    private void SpawnTile(int x, int z, TileType type)
+    public Tile SpawnTile(int x, int z, TileType type)
     {
         GameObject prefabToSpawn;
         switch (type)
@@ -123,10 +115,10 @@ public class GridManager : MonoBehaviour, IGridManager
         {
             spawnedTile.LevelUpSelf();
         }
-
+        return spawnedTile;
     }
 
-    private void AddTileToGrid(int x, int z, Tile spawnedTile)
+    protected void AddTileToGrid(int x, int z, Tile spawnedTile)
     {
         spawnedTile.name = $"Tile {x} {z}";
         // MainGrid layer is only rendered by the main camera
@@ -136,7 +128,7 @@ public class GridManager : MonoBehaviour, IGridManager
         spawnedTile.position = new Point(x, z);
         try
         {
-            tiles.Add(spawnedTile.position, spawnedTile);
+            Tiles.Add(spawnedTile.position, spawnedTile);
         }
         catch (ArgumentException ae)
         {
@@ -145,7 +137,7 @@ public class GridManager : MonoBehaviour, IGridManager
         }
     }
 
-    public void ExtendGrid()
+    public virtual void ExtendGrid()
     {
         AddMovesOnExtend();
         //targetScoreForExtend = gridSize * 3 * settings.targetScoreMultiplier;
@@ -166,7 +158,7 @@ public class GridManager : MonoBehaviour, IGridManager
         {
             // check if water
             Tile nTile;
-            tiles.TryGetValue(new Point(i, gridMax), out nTile);
+            Tiles.TryGetValue(new Point(i, gridMax), out nTile);
             if (nTile.TileType == TileType.Water)
             {   //spawn another water
                 SpawnTile(i, gridMax + 1, TileType.Water);
@@ -185,7 +177,7 @@ public class GridManager : MonoBehaviour, IGridManager
         {
             // check if water
             Tile nTile;
-            tiles.TryGetValue(new Point(i, gridMin), out nTile);
+            Tiles.TryGetValue(new Point(i, gridMin), out nTile);
             if (nTile.TileType == TileType.Water)
             {
                 //spawn another water
@@ -202,7 +194,7 @@ public class GridManager : MonoBehaviour, IGridManager
 
     }
 
-    private void ZoomCamera(float newSize)
+    protected void ZoomCamera(float newSize)
     {
         DOTween.To(
                     () => gridCamera.orthographicSize,
@@ -212,7 +204,7 @@ public class GridManager : MonoBehaviour, IGridManager
                     );
     }
 
-    private void AddMovesOnExtend()
+    protected void AddMovesOnExtend()
     {
         for (int i = 0; i < settings.movesToAddOnExtend; i++)
         {
@@ -220,55 +212,6 @@ public class GridManager : MonoBehaviour, IGridManager
             moveList.GenerateRandomMove(true);
         }
     }
-
-    public void ExtendIrregularGrid()
-    {
-        AddMovesOnExtend();
-        // TODO: update targetScoreForExtend
-
-        //// Add tiles around the grid
-        // create a temp set of tiles so we do'nt extend infinitely
-        var tilesToExtend = new List<Tile>(tiles.Values);
-        foreach (var tile in tilesToExtend)
-        {
-            // does this tile have an empty space around it?
-            var pointsToCheck = new List<Point>();
-            pointsToCheck.Add(new Point(tile.position.x + 1, tile.position.z));
-            pointsToCheck.Add(new Point(tile.position.x - 1, tile.position.z));
-            pointsToCheck.Add(new Point(tile.position.x, tile.position.z + 1));
-            pointsToCheck.Add(new Point(tile.position.x, tile.position.z - 1));
-
-            foreach (var pointToCheck in pointsToCheck)
-            {
-                if (!tiles.TryGetValue(pointToCheck, out _))
-                {
-                    // TODO: check if this needs to be river?
-                    SpawnTile(pointToCheck.x, pointToCheck.z, TileType.Dirt);
-                }
-            }
-
-        }
-
-        // TODO: re-center camera on new set of tiles 
-        ZoomCamera(gridCamera.orthographicSize + 10);
-
-        // TODO: update gridMin/gridMax?
-    }
-
-    private void CreateBoardFromPlacedTiles()
-    {
-        irregularGrid = true;
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            var go = transform.GetChild(i);
-            AddTileToGrid(
-                (int)go.transform.position.x / 10,
-                (int)go.transform.position.z / 10,
-                go.GetComponent<Tile>());
-        }
-    }
-
-
 
     private void HandleScoreChanged(int score)
     {
@@ -320,7 +263,7 @@ public class GridManager : MonoBehaviour, IGridManager
             targetTile.enabled = false;
 
             // swap the tile reference in the Grid
-            tiles.Remove(targetTile.position);
+            Tiles.Remove(targetTile.position);
             // set up the name etc.
             AddTileToGrid(targetTile.position.x, targetTile.position.z, sourceTile);
 
@@ -350,11 +293,7 @@ public class GridManager : MonoBehaviour, IGridManager
     {
         if (CalculateScore() >= targetScoreForExtend)
         {
-            if (irregularGrid)
-                ExtendIrregularGrid();
-            else
-                ExtendGrid();
-
+            ExtendGrid();
         }
 
         if (moveList.movesLeft == 0)
@@ -369,7 +308,7 @@ public class GridManager : MonoBehaviour, IGridManager
     {
         //regular tiles
         var thisScore = 0;
-        foreach (var tile in tiles)
+        foreach (var tile in Tiles)
         {
             thisScore += tile.Value.Score;
         }
@@ -384,42 +323,5 @@ public class GridManager : MonoBehaviour, IGridManager
     }
 
     // public void SaveScore() => settings.Scores.Add(totalScore);
-
-}
-public struct Point
-{
-    public int x;
-    public int z;
-
-    public Point(int x, int z) : this()
-    {
-        this.x = x;
-        this.z = z;
-    }
-
-    public override string ToString()
-    {
-        return x + " " + z; 
-    }
-
-    public static bool operator ==(Point p1, Point p2)
-    {
-        return (p1.x == p2.x && p1.z == p2.z);
-    }
-
-    public static bool operator !=(Point p1, Point p2)
-    {
-        return !(p1.x == p2.x && p1.z == p2.z);
-    }
-
-    public override bool Equals(object obj)
-    {
-        return base.Equals(obj);
-    }
-
-    public override int GetHashCode()
-    {
-        return base.GetHashCode();
-    }
 
 }

@@ -11,8 +11,9 @@ using UnityEngine.UI;
 public class BonusManager : MonoBehaviour
 {
     [SerializeField]
-    private GridManager gridManager;
-    
+    private GameObject _gridManager;
+    public IGridManager gridManager => _gridManager.GetComponent<IGridManager>();
+
     public SettingsSO settings;
     public GameObject bonusImagePrefab;
 
@@ -75,7 +76,7 @@ public class BonusManager : MonoBehaviour
         else
             bonus = BonusProcessor.GetBonus((BonusType)type);
 
-        bonus.tiles = gridManager.tiles;
+        bonus.tiles = gridManager.Tiles;
         activeBonuses[bonusPosition] = bonus;
         var bonusImagetransform = bonusImages.transform.Find("BonusImage" + bonusPosition);
         GameObject bonusImage;

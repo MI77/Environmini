@@ -1059,7 +1059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 881e836176ab7d648b6ef76ec69a1638, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridManager: {fileID: 1618893153}
+  _gridManager: {fileID: 1618893152}
   canvas: {fileID: 693746968}
 --- !u!4 &566631765
 Transform:
@@ -1990,7 +1990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c8808734e39a4f41ac55d253cfd3b3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridManager: {fileID: 1618893153}
+  _gridManager: {fileID: 1618893152}
   settings: {fileID: 11400000, guid: bfb43b4dcd5b53a428cdf8ec06a7b7c9, type: 2}
   bonusImagePrefab: {fileID: 4902420392823503977, guid: d79ee2f619f393040840a6998ed69e17, type: 3}
   debugBonusList: 
@@ -3462,11 +3462,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1618893154}
-  - component: {fileID: 1618893153}
   - component: {fileID: 1618893155}
+  - component: {fileID: 1618893153}
   m_Layer: 6
   m_Name: GridManager
-  m_TagString: Untagged
+  m_TagString: GridManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3480,10 +3480,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1618893152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22ad80f581cf8c3489c6e58a607f416e, type: 3}
+  m_Script: {fileID: 11500000, guid: bf5c190c6888810408cdd6686f8b886f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: 4
+  gridSize: 0
   gridMin: 1
   gridMax: 0
   settings: {fileID: 11400000, guid: e6adb649ca997754ca8d10b24096e26d, type: 2}
@@ -3491,10 +3491,8 @@ MonoBehaviour:
   totalScore: 0
   targetScoreForExtend: 0
   scoreManager: {fileID: 1021698958}
-  restartButton: {fileID: 0}
   bonusManager: {fileID: 927393442}
   menuManager: {fileID: 1706362958}
-  teststuff: {fileID: 0}
   gridCamera: {fileID: 963194227}
   timerCursor: {fileID: 2800000, guid: 5411a68b3e639e349ad187179a9fad81, type: 3}
   pointerCursor: {fileID: 0}
@@ -5522,7 +5520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c07b17a38773d44b12789d19af51a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grid: {fileID: 1618893153}
+  _gridManager: {fileID: 1618893152}
   moveList: {fileID: 342275076}
   bonusManager: {fileID: 927393442}
 --- !u!4 &2098948104

@@ -12,32 +12,32 @@ public class Forest : Tile
         PlayLevelUpNoise();
         RaiseScoreChangedEvent();
     }
-    public override IEnumerator LevelUpSurroundingTiles(GridManager gridManager)
+    public override IEnumerator LevelUpSurroundingTiles(IGridManager gridManager)
     {
-        var tiles = gridManager.tiles;
+        var tiles = gridManager.Tiles;
 
         Tile nTile;
         if (tiles.TryGetValue(new Point(position.x + 1, position.z), out nTile))
         {
-            SetTypeOnTile(gridManager, nTile, settings.forestPrefab);
+            SetTypeOnTile(nTile, settings.forestPrefab, gridManager);
         }
         //yield return new WaitForSeconds(Random.Range(0, settings.timeBetweenForestTiles));
 
         if (tiles.TryGetValue(new Point(position.x, position.z + 1), out nTile))
         {
-            SetTypeOnTile(gridManager, nTile, settings.forestPrefab);
+            SetTypeOnTile(nTile, settings.forestPrefab, gridManager);
         }
         //yield return new WaitForSeconds(Random.Range(0, settings.timeBetweenForestTiles));
 
         if (tiles.TryGetValue(new Point(position.x - 1, position.z), out nTile))
         {
-            SetTypeOnTile(gridManager, nTile, settings.forestPrefab);
+            SetTypeOnTile(nTile, settings.forestPrefab, gridManager);
         }
         //yield return new WaitForSeconds(Random.Range(0, settings.timeBetweenForestTiles));
 
         if (tiles.TryGetValue(new Point(position.x, position.z - 1), out nTile))
         {
-            SetTypeOnTile(gridManager, nTile, settings.forestPrefab);
+            SetTypeOnTile(nTile, settings.forestPrefab, gridManager);
         }
         yield return null;
     }

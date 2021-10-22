@@ -51,7 +51,7 @@ public abstract class Tile : MonoBehaviour
     }
 
     public abstract void LevelUpSelf();
-    public abstract IEnumerator LevelUpSurroundingTiles(GridManager gridManager);
+    public abstract IEnumerator LevelUpSurroundingTiles(IGridManager gridManager);
 
     public void PlayLevelUpNoise()
     {
@@ -101,7 +101,7 @@ public abstract class Tile : MonoBehaviour
         xAnimals?.gameObject.SetActive(true);
     }
 
-    internal IEnumerator LevelUpAnimalTiles(GridManager gridManager)
+    internal IEnumerator LevelUpAnimalTiles(IGridManager gridManager)
     {
         if (hasXAnimals)
         {
@@ -115,17 +115,39 @@ public abstract class Tile : MonoBehaviour
             var maxTilesToCheck = settings.animalTilesToRun;
 
             // work out how far to run
-            int tilesToward = Math.Min(maxTilesToCheck, gridManager.gridMax - position.x);
-            int tilesAway = Math.Min(maxTilesToCheck, position.x - gridManager.gridMin);
+            // TODO : How can I do this recursively to deal with odd-sized boards?
+            // See also: River.LevelUpSurroundingTiles
+            bool stopPos = false, stopNeg = false;
+            int i = 0, posTiles = 0, negTiles = 0;
+
+            while ((!stopPos && !stopNeg) || i == maxTilesToCheck)
+            {
+                if (gridManager.Tiles.TryGetValue(new Point(position.x + i, position.z), out nTile))
+                    posTiles = i;
+                else
+                    stopPos = true;
+
+                if (gridManager.Tiles.TryGetValue(new Point(position.x - i, position.z), out nTile))
+                    negTiles = i;
+                else
+                    stopNeg = true;
+
+                i++;
+            }
+
+            int tilesToward = Math.Min(maxTilesToCheck, posTiles);
+            int tilesAway = Math.Min(maxTilesToCheck, negTiles);
+
+
 
             StartCoroutine(xAnimals.AnimalRun(tilesToward, tilesAway));
 
-            for (int i = 1; i <= maxTilesToCheck; i++)
+            for (int j = 1; j <= maxTilesToCheck; j++)
             {
-                if (gridManager.tiles.TryGetValue(new Point(position.x + i, position.z), out nTile))
-                    SetTypeOnTile(gridManager, nTile, prefab);
-                if (gridManager.tiles.TryGetValue(new Point(position.x - i, position.z), out nTile))
-                    SetTypeOnTile(gridManager, nTile, prefab);
+                if (gridManager.Tiles.TryGetValue(new Point(position.x + j, position.z), out nTile))
+                    SetTypeOnTile(nTile, prefab, gridManager);
+                if (gridManager.Tiles.TryGetValue(new Point(position.x - j, position.z), out nTile))
+                    SetTypeOnTile(nTile, prefab, gridManager);
                 yield return new WaitForSeconds(settings.timeBetweenAnimalTiles);
             }
             // turn them off so we don't fire this path again
@@ -136,7 +158,7 @@ public abstract class Tile : MonoBehaviour
 
     }
 
-    public virtual void SetTypeOnTile(GridManager gridManager, Tile selectedTile, GameObject prefab)
+    public virtual void SetTypeOnTile(Tile selectedTile, GameObject prefab, IGridManager gridManager)
     {
         if (selectedTile.CanSetTile)
         {
