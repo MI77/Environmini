@@ -39,14 +39,14 @@ public class IrregularGridManager : GridManager
 
         if (tilesToExtend == null)
         {
-            // first time around, tilesToExtend needs to be new List<Tile>(Tiles.Values);
+            // first time around, tilesToExtend needs to be new List from the current Tiles.Values);
             tilesToExtend = new List<Tile>(Tiles.Values);
             // at the end of the first time, outerTiles will contain the ones we added
             outerTiles = new List<Tile>();
         }
         else
         {
-            // on subsequent extends, tilesToExtend needs to be a new List<Tile>(outerTiles);
+            // on subsequent extends, tilesToExtend needs to be a new List from the current outerTiles;
             tilesToExtend = new List<Tile>(outerTiles);
             // and we need to clear outerTiles
             outerTiles.Clear();
@@ -65,8 +65,17 @@ public class IrregularGridManager : GridManager
             {
                 if (!Tiles.TryGetValue(pointToCheck, out _))
                 {
-                    // TODO: check if this needs to be river?
-                    outerTiles.Add(SpawnTile(pointToCheck.x, pointToCheck.z, TileType.Dirt));
+                    // check if this needs to be river
+                    Tile northTile, southTile;
+                    Tiles.TryGetValue(new Point(pointToCheck.x, pointToCheck.z - 1), out northTile);
+                    Tiles.TryGetValue(new Point(pointToCheck.x, pointToCheck.z + 1), out southTile);
+
+                    if (northTile != null && northTile.TileType == TileType.Water)
+                        outerTiles.Add(SpawnTile(pointToCheck.x, pointToCheck.z, TileType.Water));
+                    else if (southTile != null && southTile.TileType == TileType.Water)
+                        outerTiles.Add(SpawnTile(pointToCheck.x, pointToCheck.z, TileType.Water));
+                    else
+                        outerTiles.Add(SpawnTile(pointToCheck.x, pointToCheck.z, TileType.Dirt));
                 }
             }
 
@@ -74,8 +83,6 @@ public class IrregularGridManager : GridManager
 
         // TODO: re-center camera on new set of tiles 
         ZoomCamera(gridCamera.orthographicSize + 10);
-
-        // TODO: update gridMin/gridMax?
     }
 
 
