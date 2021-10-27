@@ -51,7 +51,7 @@ public abstract class Tile : MonoBehaviour
     }
 
     public abstract void LevelUpSelf();
-    public abstract IEnumerator LevelUpSurroundingTiles(IGridManager gridManager);
+    public abstract IEnumerator LevelUpSurroundingTiles(GridManager gridManager);
 
     public void PlayLevelUpNoise()
     {
@@ -101,7 +101,7 @@ public abstract class Tile : MonoBehaviour
         xAnimals?.gameObject.SetActive(true);
     }
 
-    internal IEnumerator LevelUpAnimalTiles(IGridManager gridManager)
+    internal IEnumerator LevelUpAnimalTiles(GridManager gridManager)
     {
         if (hasXAnimals)
         {
@@ -163,7 +163,7 @@ public abstract class Tile : MonoBehaviour
 
     }
 
-    public virtual void SetTypeOnTile(Tile selectedTile, GameObject prefab, IGridManager gridManager)
+    public virtual void SetTypeOnTile(Tile selectedTile, GameObject prefab, GridManager gridManager)
     {
         if (selectedTile.CanSetTile)
         {

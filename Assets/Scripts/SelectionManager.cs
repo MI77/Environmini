@@ -7,12 +7,13 @@ using static UnityEngine.InputSystem.InputAction;
 public class SelectionManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _gridManager;
-    public IGridManager gridManager => _gridManager.GetComponent<IGridManager>();
+    private GridManager _gridManager;
 
     public Canvas canvas;
     
     public Point selectedPoint;
+
+    public GridManager GridManager { get => _gridManager; set => _gridManager = value; }
 
     private void Awake()
     {
@@ -51,7 +52,7 @@ public class SelectionManager : MonoBehaviour
 
         
         Tile tileToSelect;
-        gridManager.Tiles.TryGetValue(pointToSelect, out tileToSelect);
+        GridManager.Tiles.TryGetValue(pointToSelect, out tileToSelect);
         if (tileToSelect != null)
         {
             DeselectCurrentTile();
@@ -62,7 +63,7 @@ public class SelectionManager : MonoBehaviour
     private void DeselectCurrentTile()
     {
         Tile selectedTile;
-        gridManager.Tiles.TryGetValue(selectedPoint, out selectedTile);
+        GridManager.Tiles.TryGetValue(selectedPoint, out selectedTile);
         if (selectedTile != null)
             selectedTile.DeselectTile();
     }
@@ -70,7 +71,7 @@ public class SelectionManager : MonoBehaviour
     public void SetTile(CallbackContext context)
     {
         Tile tileToSet;
-        gridManager.Tiles.TryGetValue(selectedPoint, out tileToSet);
+        GridManager.Tiles.TryGetValue(selectedPoint, out tileToSet);
         if (tileToSet != null)
         {
             tileToSet.OnMouseUpAsButton();

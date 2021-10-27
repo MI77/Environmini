@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class GridManager : MonoBehaviour, IGridManager
+public class GridManager : MonoBehaviour
 {
     [SerializeField] public int gridSize;
     private Dictionary<Point, Tile> tiles;
@@ -293,7 +293,15 @@ public class GridManager : MonoBehaviour, IGridManager
     {
         if (CalculateScore() >= targetScoreForExtend)
         {
-            ExtendGrid();
+            if (settings.finishLevelWhenTargetReached)
+            {
+                turnIsProcessed = true;
+                scoreManager.UpdateHighScore(CalculateScore());
+                CompleteLevel();
+                return;
+            }
+            else
+                ExtendGrid();
         }
 
         if (moveList.movesLeft == 0)
@@ -302,6 +310,11 @@ public class GridManager : MonoBehaviour, IGridManager
             menuManager.ShowGameOverMenu();
         }
         turnIsProcessed = true;
+    }
+
+    private void CompleteLevel()
+    {
+        menuManager.ShowWinMenu();
     }
 
     public int CalculateScore()

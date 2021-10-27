@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Data", menuName = "SettingsData")]
@@ -20,6 +21,8 @@ public class SettingsSO : ScriptableObject
     public int startingTargetScore = 32;
     public int targetScoreMultiplier = 8;
     public int numActiveBonuses = 3;
+
+    public bool finishLevelWhenTargetReached = true;
     
     public int highScore = 0;
     public List<int> Scores;

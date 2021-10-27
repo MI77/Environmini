@@ -12,7 +12,7 @@ public class Forest : Tile
         PlayLevelUpNoise();
         RaiseScoreChangedEvent();
     }
-    public override IEnumerator LevelUpSurroundingTiles(IGridManager gridManager)
+    public override IEnumerator LevelUpSurroundingTiles(GridManager gridManager)
     {
         var tiles = gridManager.Tiles;
 

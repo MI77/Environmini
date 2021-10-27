@@ -11,8 +11,7 @@ using UnityEngine.UI;
 public class BonusManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _gridManager;
-    public IGridManager gridManager => _gridManager.GetComponent<IGridManager>();
+    private GridManager _gridManager;
 
     public SettingsSO settings;
     public GameObject bonusImagePrefab;
@@ -26,13 +25,24 @@ public class BonusManager : MonoBehaviour
     private Bonus[] activeBonuses;
     [SerializeField]
     private GameObject bonusImages;
+    [SerializeField]
+    private GameObject bonusUI;
+
     private Vector3 imageOffset = new Vector3(160, 0, 0);
 
     private List<(Tile, BonusType)> bonusesAwarded;
-    
+
+    public GridManager GridManager { get => _gridManager; set => _gridManager = value; }
+
     private void Awake()
     {
+        if(settings.numActiveBonuses == 0)
+        {
+            bonusUI.SetActive(false);
+        }
+        
         activeBonuses = new Bonus[settings.numActiveBonuses];
+
         bonusesAwarded = new List<(Tile, BonusType)>();
         bonusAudio = GetComponent<AudioSource>();
     }
@@ -76,7 +86,7 @@ public class BonusManager : MonoBehaviour
         else
             bonus = BonusProcessor.GetBonus((BonusType)type);
 
-        bonus.tiles = gridManager.Tiles;
+        bonus.tiles = GridManager.Tiles;
         activeBonuses[bonusPosition] = bonus;
         var bonusImagetransform = bonusImages.transform.Find("BonusImage" + bonusPosition);
         GameObject bonusImage;

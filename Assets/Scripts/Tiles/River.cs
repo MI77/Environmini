@@ -29,7 +29,7 @@ public class River : Tile
         gridManager = (GridManager)FindObjectOfType(typeof(GridManager));
         levelUpNoise = this.gameObject.AddComponent<AudioSource>();
     }
-    public override IEnumerator LevelUpSurroundingTiles(IGridManager gridManager)
+    public override IEnumerator LevelUpSurroundingTiles(GridManager gridManager)
     {
         var tiles = gridManager.Tiles;
         Tile nTile;
@@ -59,7 +59,7 @@ public class River : Tile
         
     }
 
-    public static void CheckBanks(Tile tileToCheck, IGridManager gridManager)
+    public static void CheckBanks(Tile tileToCheck, GridManager gridManager)
     {
         var tiles = gridManager.Tiles;
         Tile nTile;

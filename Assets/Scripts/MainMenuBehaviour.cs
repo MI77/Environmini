@@ -20,6 +20,7 @@ public class MainMenuBehaviour : MonoBehaviour
     public GameObject currentMenu;
     public PlayerInput playerInput;
     public GameManager gameManager;
+    public GameObject winLevelMenu;
 
     public void StartNewGame()
     {
@@ -66,5 +67,10 @@ public class MainMenuBehaviour : MonoBehaviour
     internal void ShowGameOverMenu()
     {
         ShowMenu(gameOverMenu);
+    }
+
+    internal void ShowWinMenu()
+    {
+        ShowMenu(winLevelMenu);
     }
 }
