@@ -232,10 +232,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5093153598009507488}
   - component: {fileID: 6437614155427852344}
-  - component: {fileID: 5569359050586723827}
   - component: {fileID: 6520540139607467163}
   - component: {fileID: 1816963346557994095}
-  - component: {fileID: 3548943694565942130}
+  - component: {fileID: 6594663052075704064}
   m_Layer: 0
   m_Name: Dirt
   m_TagString: Untagged
@@ -279,19 +278,6 @@ MonoBehaviour:
   level1: {fileID: 7474580672421517399}
   score: 0
   settings: {fileID: 11400000, guid: bfb43b4dcd5b53a428cdf8ec06a7b7c9, type: 2}
---- !u!114 &5569359050586723827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7421896664010372552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa707762bcb118f41b0c9084d586edb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highlight: {fileID: 1053364220258583716}
 --- !u!65 &6520540139607467163
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -317,6 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc4dd79dea043be42a5827255a63792f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 2569126759223702498}
   bonusesAwarded: 
   highlight: {fileID: 1053364220258583716}
   levelUpClips: []
@@ -327,8 +314,7 @@ MonoBehaviour:
   hasXAnimals: 0
   xAnimals: {fileID: 0}
   isInMoveList: 0
-  block: {fileID: 2569126759223702498}
---- !u!114 &3548943694565942130
+--- !u!114 &6594663052075704064
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -337,9 +323,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 7421896664010372552}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58e27166578efe2459de69f0fa906ab1, type: 3}
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1053364220258583716}
+          m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1053364220258583716}
+          m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &7474580672421517399
 GameObject:
   m_ObjectHideFlags: 0
