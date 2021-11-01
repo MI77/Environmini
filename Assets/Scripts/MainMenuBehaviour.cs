@@ -47,7 +47,7 @@ public class MainMenuBehaviour : MonoBehaviour
         if (currentMenu != null)
         {
             currentMenu.SetActive(false);
-            //playerInput.SwitchCurrentActionMap("GridControls");
+            playerInput.SwitchCurrentActionMap("GridControls");
         }
         currentMenu = null;
 
@@ -60,7 +60,7 @@ public class MainMenuBehaviour : MonoBehaviour
         if (menuToShow != null)
         {
             menuToShow.SetActive(true);
-            //playerInput.SwitchCurrentActionMap("MenuControls");
+            playerInput.SwitchCurrentActionMap("MenuControls");
         }
     }
 

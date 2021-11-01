@@ -62,6 +62,15 @@ public partial class @GameControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Point"",
+                    ""type"": ""Value"",
+                    ""id"": ""621f3b6c-0d42-4b4f-8285-15033af367ac"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -227,6 +236,39 @@ public partial class @GameControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""XR"",
                     ""action"": ""Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dc8ef4da-5f5e-449e-a70e-b18bc17d2440"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Point"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""68a8f477-da78-4c7a-9311-21b85200d8d6"",
+                    ""path"": ""<Pen>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Point"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a2760386-753b-4f88-88a2-3657b8bd400b"",
+                    ""path"": ""<Touchscreen>/touch*/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
+                    ""action"": ""Point"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -657,6 +699,7 @@ public partial class @GameControls : IInputActionCollection2, IDisposable
         m_GridControls_SetTile = m_GridControls.FindAction("SetTile", throwIfNotFound: true);
         m_GridControls_OpenMenu = m_GridControls.FindAction("OpenMenu", throwIfNotFound: true);
         m_GridControls_Click = m_GridControls.FindAction("Click", throwIfNotFound: true);
+        m_GridControls_Point = m_GridControls.FindAction("Point", throwIfNotFound: true);
         // MenuControls
         m_MenuControls = asset.FindActionMap("MenuControls", throwIfNotFound: true);
         m_MenuControls_Navigate = m_MenuControls.FindAction("Navigate", throwIfNotFound: true);
@@ -727,6 +770,7 @@ public partial class @GameControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_GridControls_SetTile;
     private readonly InputAction m_GridControls_OpenMenu;
     private readonly InputAction m_GridControls_Click;
+    private readonly InputAction m_GridControls_Point;
     public struct GridControlsActions
     {
         private @GameControls m_Wrapper;
@@ -735,6 +779,7 @@ public partial class @GameControls : IInputActionCollection2, IDisposable
         public InputAction @SetTile => m_Wrapper.m_GridControls_SetTile;
         public InputAction @OpenMenu => m_Wrapper.m_GridControls_OpenMenu;
         public InputAction @Click => m_Wrapper.m_GridControls_Click;
+        public InputAction @Point => m_Wrapper.m_GridControls_Point;
         public InputActionMap Get() { return m_Wrapper.m_GridControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -756,6 +801,9 @@ public partial class @GameControls : IInputActionCollection2, IDisposable
                 @Click.started -= m_Wrapper.m_GridControlsActionsCallbackInterface.OnClick;
                 @Click.performed -= m_Wrapper.m_GridControlsActionsCallbackInterface.OnClick;
                 @Click.canceled -= m_Wrapper.m_GridControlsActionsCallbackInterface.OnClick;
+                @Point.started -= m_Wrapper.m_GridControlsActionsCallbackInterface.OnPoint;
+                @Point.performed -= m_Wrapper.m_GridControlsActionsCallbackInterface.OnPoint;
+                @Point.canceled -= m_Wrapper.m_GridControlsActionsCallbackInterface.OnPoint;
             }
             m_Wrapper.m_GridControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -772,6 +820,9 @@ public partial class @GameControls : IInputActionCollection2, IDisposable
                 @Click.started += instance.OnClick;
                 @Click.performed += instance.OnClick;
                 @Click.canceled += instance.OnClick;
+                @Point.started += instance.OnPoint;
+                @Point.performed += instance.OnPoint;
+                @Point.canceled += instance.OnPoint;
             }
         }
     }
@@ -847,6 +898,7 @@ public partial class @GameControls : IInputActionCollection2, IDisposable
         void OnSetTile(InputAction.CallbackContext context);
         void OnOpenMenu(InputAction.CallbackContext context);
         void OnClick(InputAction.CallbackContext context);
+        void OnPoint(InputAction.CallbackContext context);
     }
     public interface IMenuControlsActions
     {

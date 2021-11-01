@@ -811,7 +811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 881e836176ab7d648b6ef76ec69a1638, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gridManager: {fileID: 1618893152}
+  _gridManager: {fileID: 1618893153}
   canvas: {fileID: 693746968}
 --- !u!4 &566631765
 Transform:
@@ -936,6 +936,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 3e72c950-9773-4f62-8fe7-50b4404a08af
     m_ActionName: MenuControls/HideMenu[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 621f3b6c-0d42-4b4f-8285-15033af367ac
+    m_ActionName: GridControls/Point[/Mouse/position,/Touchscreen/touch0/position,/Touchscreen/touch1/position,/Touchscreen/touch2/position,/Touchscreen/touch3/position,/Touchscreen/touch4/position,/Touchscreen/touch5/position,/Touchscreen/touch6/position,/Touchscreen/touch7/position,/Touchscreen/touch8/position,/Touchscreen/touch9/position]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: GridControls
@@ -1687,6 +1691,7 @@ MonoBehaviour:
   particlesPrefab: {fileID: 6321668938006734270, guid: ce36b6b71b35d6a428d63d235b08df77, type: 3}
   bonusAudio: {fileID: 0}
   bonusImages: {fileID: 186248029}
+  bonusUI: {fileID: 0}
 --- !u!4 &927393443
 Transform:
   m_ObjectHideFlags: 0
@@ -3119,7 +3124,6 @@ MonoBehaviour:
   totalScore: 0
   targetScoreForExtend: 0
   scoreManager: {fileID: 1021698958}
-  restartButton: {fileID: 0}
   bonusManager: {fileID: 927393442}
   menuManager: {fileID: 1706362958}
   gridCamera: {fileID: 963194227}
@@ -3269,7 +3273,7 @@ MonoBehaviour:
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
   m_ActionsAsset: {fileID: -944628639613478452, guid: 694a4932b46a84844a568a8e4179414c, type: 3}
-  m_PointAction: {fileID: 2401927828190370761, guid: 694a4932b46a84844a568a8e4179414c, type: 3}
+  m_PointAction: {fileID: 5011116123536853836, guid: 694a4932b46a84844a568a8e4179414c, type: 3}
   m_MoveAction: {fileID: 5911304474210047301, guid: 694a4932b46a84844a568a8e4179414c, type: 3}
   m_SubmitAction: {fileID: 5844710161073207987, guid: 694a4932b46a84844a568a8e4179414c, type: 3}
   m_CancelAction: {fileID: -5639455065485291037, guid: 694a4932b46a84844a568a8e4179414c, type: 3}
@@ -3347,6 +3351,7 @@ MonoBehaviour:
   currentMenu: {fileID: 2022806255}
   playerInput: {fileID: 566631766}
   gameManager: {fileID: 2098948103}
+  winLevelMenu: {fileID: 0}
 --- !u!4 &1706362959
 Transform:
   m_ObjectHideFlags: 0
@@ -5017,9 +5022,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c07b17a38773d44b12789d19af51a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gridManager: {fileID: 1618893152}
+  gridManager: {fileID: 1618893153}
   moveList: {fileID: 342275076}
   bonusManager: {fileID: 927393442}
+  selectionManager: {fileID: 566631764}
+  settings: {fileID: 11400000, guid: bfb43b4dcd5b53a428cdf8ec06a7b7c9, type: 2}
+  nextLevel: {fileID: 0}
 --- !u!4 &2098948104
 Transform:
   m_ObjectHideFlags: 0
