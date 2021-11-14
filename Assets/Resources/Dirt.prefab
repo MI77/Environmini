@@ -317,6 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc4dd79dea043be42a5827255a63792f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 2569126759223702498}
   bonusesAwarded: 
   highlight: {fileID: 1053364220258583716}
   levelUpClips: []
@@ -327,7 +328,6 @@ MonoBehaviour:
   hasXAnimals: 0
   xAnimals: {fileID: 0}
   isInMoveList: 0
-  block: {fileID: 2569126759223702498}
 --- !u!114 &3548943694565942130
 MonoBehaviour:
   m_ObjectHideFlags: 0
