@@ -5,7 +5,8 @@ using UnityEngine;
 public class Forest : Tile
 {
     public override TileType TileType => TileType.Forest;
-    public override GameObject GetPrefab() => Resources.Load("Forest") as GameObject;
+    //public override GameObject GetPrefab() => Resources.Load("Forest") as GameObject;
+    //public override GameObject GetTemplate() => Resources.Load("ForestTemplate") as GameObject;
     public override void LevelUpSelf()
     {
         tileLevelManager.LevelUp();

@@ -15,15 +15,12 @@ public class SelectionManager : MonoBehaviour
     {
         selectedPoint = new Point(0, 0);
     }
-
-    public void SelectTileUnderCursor(CallbackContext context)
-    {
-
-    }
     public void SetSelectedPoint(Point point)
     {
         DeselectCurrentTile();
         selectedPoint = point;
+        if(gridManager.isReadyForTurn)
+            gridManager.moveList.ShowNextTemplateAt(point);
     }
     public void MoveSelection(CallbackContext context)
     {
@@ -56,12 +53,15 @@ public class SelectionManager : MonoBehaviour
         }
     }
 
-    private void DeselectCurrentTile()
+    public void DeselectCurrentTile()
     {
         Tile selectedTile;
         gridManager.tiles.TryGetValue(selectedPoint, out selectedTile);
         if (selectedTile != null)
+        {
+            gridManager.moveList.HideTemplate();
             selectedTile.DeselectTile();
+        }
     }
 
     public void SetTile(CallbackContext context)

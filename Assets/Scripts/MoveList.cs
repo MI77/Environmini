@@ -15,11 +15,10 @@ public class MoveList : MonoBehaviour
 
     private readonly System.Random random;
     public List<GameObject> debugMoveList;
+    
+    [SerializeField]
+    private TemplateManager templateManager;
 
-    private void Awake()
-    {
-        //GenerateMoveList();
-    }
     public void GenerateMoveList()
     {
         // clear the internal list
@@ -44,6 +43,16 @@ public class MoveList : MonoBehaviour
                 GenerateFixedMove(debugMoveList[y]);
             }
         }
+    }
+
+    public void ShowNextTemplateAt(Point point)
+    {
+        templateManager.ShowTemplateAt(moveList[0].GetTemplate(), point);
+        
+    }
+    internal void HideTemplate()
+    {
+        templateManager.HideTemplates();
     }
 
     public Tile GetNextMove()

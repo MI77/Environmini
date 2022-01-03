@@ -32,6 +32,7 @@ public class GridManager : MonoBehaviour
 
     public Texture2D timerCursor;
     public Texture2D pointerCursor;
+    public bool isReadyForTurn = true;
 
     private bool turnIsProcessed = false;
 
@@ -49,12 +50,18 @@ public class GridManager : MonoBehaviour
     private void Update()
     {
         if (DOTween.TotalPlayingTweens() != 0)
+        {
+            isReadyForTurn = false;
             Cursor.SetCursor(timerCursor, Vector2.zero, CursorMode.Auto);
+        }
         else
         {
-            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
             if (!turnIsProcessed)
                 ProcessEndOfTurn();
+
+            isReadyForTurn = true;
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+
         }
     }
     public void GenerateGrid()
@@ -110,7 +117,7 @@ public class GridManager : MonoBehaviour
             case TileType.Grass:
                 prefabToSpawn = settings.grassPrefab;
                 break;
-            case TileType.Water:
+            case TileType.River:
                 prefabToSpawn = settings.riverPrefab;
                 break;
             case TileType.Wetland:
@@ -182,9 +189,9 @@ public class GridManager : MonoBehaviour
             // check if water
             Tile nTile;
             tiles.TryGetValue(new Point(i, gridMax), out nTile);
-            if (nTile.TileType == TileType.Water)
+            if (nTile.TileType == TileType.River)
             {   //spawn another water
-                SpawnTile(i, gridMax + 1, TileType.Water);
+                SpawnTile(i, gridMax + 1, TileType.River);
             }
             else
                 SpawnTile(i, gridMax + 1, TileType.Dirt);
@@ -201,10 +208,10 @@ public class GridManager : MonoBehaviour
             // check if water
             Tile nTile;
             tiles.TryGetValue(new Point(i, gridMin), out nTile);
-            if (nTile.TileType == TileType.Water)
+            if (nTile.TileType == TileType.River)
             {
                 //spawn another water
-                SpawnTile(i, gridMin - 1, TileType.Water);
+                SpawnTile(i, gridMin - 1, TileType.River);
             }
             else
                 SpawnTile(i, gridMin - 1, TileType.Dirt);
@@ -252,7 +259,7 @@ public class GridManager : MonoBehaviour
             // we'll keep the existing tile, so destroy the new one
             Destroy(sourceTileGO);
         }
-        else if (targetTile.TileType == TileType.Water)
+        else if (targetTile.TileType == TileType.River)
             // water tiles can't be changed
         {
             Destroy(sourceTileGO);
@@ -338,6 +345,11 @@ public struct Point
     {
         this.x = x;
         this.z = z;
+    }
+
+    public Vector3 WorldPosition()
+    {
+        return new Vector3(x * 10, 0, z * 10);
     }
 
     public override string ToString()

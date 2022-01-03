@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class River : Tile
 {
-    public override TileType TileType => TileType.Water;
-    public override GameObject GetPrefab() => Resources.Load("River") as GameObject;
+    public override TileType TileType => TileType.River;
+    //public override GameObject GetPrefab() => Resources.Load("River") as GameObject;
+    //public override GameObject GetTemplate() => Resources.Load("RiverTemplate") as GameObject;
     public override bool CanSetTile => false;
     public GridManager gridManager;
 

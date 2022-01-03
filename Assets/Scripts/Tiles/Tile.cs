@@ -12,7 +12,8 @@ public abstract class Tile : MonoBehaviour
     public MeshRenderer block;
 
     public abstract TileType TileType { get; }
-    public abstract GameObject GetPrefab();
+    public GameObject GetPrefab() => Resources.Load(TileType.ToString()) as GameObject;
+    public GameObject GetTemplate() => Resources.Load(TileType.ToString() + "Template") as GameObject;
     public int Score { get => tileLevelManager.score;}
     public virtual bool CanSetTile { get => true; }
     
@@ -73,6 +74,7 @@ public abstract class Tile : MonoBehaviour
     }
     public void DeselectTile()
     {
+        FindObjectOfType<TemplateManager>().HideTemplates();
         highlight.enabled = false; 
         scoreText.enabled = false;
         if (!isInMoveList && Score != 0 && showingScoreOnHover != null)
