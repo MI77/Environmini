@@ -95,9 +95,13 @@ public class MoveList : MonoBehaviour
         {
             spawnedTile = Instantiate(settings.wetlandPrefab, this.transform);
         }
+        else if (r <= 80)
+        {
+            spawnedTile = Instantiate(settings.pinePrefab, this.transform);
+        }
         else
         {
-            spawnedTile = Instantiate(settings.forestPrefab, this.transform);
+            spawnedTile = Instantiate(settings.deciduousPrefab, this.transform);
         }
 
         SpawnTile(spawnedTile);

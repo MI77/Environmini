@@ -49,7 +49,7 @@ public static class TileProcessor
         }
         else
         {
-            return new Forest();
+            return new Deciduous();
         }
 
     }

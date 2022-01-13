@@ -123,8 +123,11 @@ public class GridManager : MonoBehaviour
             case TileType.Wetland:
                 prefabToSpawn = settings.wetlandPrefab;
                 break;
-            case TileType.Forest:
-                prefabToSpawn = settings.forestPrefab;
+            case TileType.Deciduous:
+                prefabToSpawn = settings.deciduousPrefab;
+                break;
+            case TileType.Pine:
+                prefabToSpawn = settings.pinePrefab;
                 break;
             default:
                 prefabToSpawn = settings.dirtPrefab;

@@ -28,7 +28,8 @@ public class SettingsSO : ScriptableObject
     public GameObject dirtPrefab;
     public GameObject wetlandPrefab;
     public GameObject riverPrefab;
-    public GameObject forestPrefab;
+    public GameObject deciduousPrefab;
+    public GameObject pinePrefab;
 
     public List<Bonus> bonuses;
     public float bonusFadeTime = 0.5f;

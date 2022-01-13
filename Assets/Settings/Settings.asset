@@ -31,10 +31,6 @@ MonoBehaviour:
   dirtPrefab: {fileID: 7421896664010372552, guid: 2746d11f7a16a6c4d85adc7d4f5a191d, type: 3}
   wetlandPrefab: {fileID: 4105891221220059404, guid: d5670e0e9b0dd6743b561cae101ea985, type: 3}
   riverPrefab: {fileID: 3183793768399989323, guid: 6e3531450b0933341aa449aa27c79144, type: 3}
-  forestPrefab: {fileID: 7421896664010372552, guid: 125a598f6da20b44f8fa585ad18b38ae, type: 3}
-  grassTemplate: {fileID: 7421896664010372552, guid: d58cc9be6bf97574ea1ef5fdf5a2a16c, type: 3}
-  dirtTemplate: {fileID: 7421896664010372552, guid: d58cc9be6bf97574ea1ef5fdf5a2a16c, type: 3}
-  wetlandTemplate: {fileID: 7421896664010372552, guid: d58cc9be6bf97574ea1ef5fdf5a2a16c, type: 3}
-  riverTemplate: {fileID: 7421896664010372552, guid: d58cc9be6bf97574ea1ef5fdf5a2a16c, type: 3}
-  forestTemplate: {fileID: 7421896664010372552, guid: d58cc9be6bf97574ea1ef5fdf5a2a16c, type: 3}
+  deciduousPrefab: {fileID: 7421896664010372552, guid: 125a598f6da20b44f8fa585ad18b38ae, type: 3}
+  pinePrefab: {fileID: 7421896664010372552, guid: eb2c80acaaf6fe4488bae2c40e2c0efd, type: 3}
   bonusFadeTime: 0.2

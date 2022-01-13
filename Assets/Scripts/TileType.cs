@@ -1,2 +1,2 @@
 ﻿public enum TileType
-{ Dirt, Grass, River, Wetland, Forest};
+{ Dirt, Grass, River, Wetland, Deciduous, Pine};
